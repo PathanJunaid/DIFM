@@ -118,3 +118,6 @@
 .imagegrid{
     width: 100%;
 }
+#image-mid{
+    max-width: 30%;
+}
