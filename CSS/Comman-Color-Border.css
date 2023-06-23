@@ -13,8 +13,6 @@
 .bg-color-blue{
     background: #24478F;
 }
-.bg-color-blue50{
-}
 .bg-color-grey{
     background-color:#585858;
 }
@@ -24,6 +22,15 @@
 }
 .bg-color-white{
     background-color: #FFFFFF;
+}
+.fw-500{
+    font-weight: 500;
+}
+.fw-600{
+    font-weight: 600;
+}
+.fw-400{
+    font-weight: 400;
 }
 .cont1
 {
@@ -106,7 +113,7 @@ li{
 }
 
 .Footer-para-size{
-    font-size: 0.6em;
+    font-size: 0.9em;
 }
 .WRY-input-h{
     min-height: 8rem;
