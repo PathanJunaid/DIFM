@@ -1,1 +1,18 @@
-
+.h-25{
+    min-height: 20vh;
+}
+.h-50{
+    min-height: 30vh;
+}
+#margin{
+    margin-top: -8em;
+}
+.marginb{
+    margin-bottom: 8em;
+}
+.fw-500{
+    font-weight: 500;
+}
+.fw-600{
+    font-weight: 600;
+}
