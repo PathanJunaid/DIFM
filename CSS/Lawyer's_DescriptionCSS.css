@@ -1,49 +1,3 @@
-.textcolor{
-    color: #333333;
-}
-.text-color-blue{
-    color: #24478F;
-}
-.text-color-white{
-    color: #FFFFFF;
-}
-.bg-color-blue{
-    background: #24478F;
-
-}
-.bg-color-blue50{
-}
-.bg-color-grey{
-    background-color:#585858;
-}
-.bg-color-lightblue{
-    background: #4D7CD3;
-
-}
-.bg-color-white{
-    background-color: #FFFFFF;
-}
-.cont1
-{
-    border: 2px soild black;
-
-}
-.bg-color-darkwhite{
-    background: #F5F5F5;
-    /* opacity: 0.6; */
-}
-.font-roboto{
-    font-weight: 'roboto' , sans-serif;
-}
-.Image106{
-    min-width: 75%;
-}
-.border-lightblue{
-    border: 2px solid #4D7CD3;
-}
-.rounded-500{
-    border-radius: 1em;
-}
 #footer{
     display: flex;
     justify-content: space-around;
@@ -85,4 +39,32 @@ li{
 }
 #box5btn{
     width: 30%;
+}
+.Image-wh{
+    width: 100%;
+    height: 267px;
+}
+.Lawyers-Profile-wh{
+    height: 251px;
+}
+.Personal-Details-wh{
+    height: 481px;
+}
+.Services-wh{
+    height: 778px;
+}
+.Photos-wh{
+    height: 340px;
+}
+.Location-wh{
+    height: 244px;
+}
+.Friend-wh{
+    height: 100px;
+}
+.URL-Copy-wh{
+    height: 100px;
+}
+.Top-Lawyers-wh{
+    height: 700px;
 }

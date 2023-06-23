@@ -45,12 +45,6 @@
     border-radius: 10px;
     z-index: 5;
 }
-.border-radius-search1{
-    border-radius: 15px;
-    
-    z-index: 5;
-    border: 2px solid #4D7CD3;
-}
 .border-radius-search2{
     border-radius: 15px;
     
@@ -64,6 +58,12 @@
 }
 .nav-item{
     margin: 0px;
+}
+.border-radius-search1{
+    border-radius: 15px;
+    
+    z-index: 5;
+    border: 2px solid #4D7CD3;
 }
 .margin-over{
     margin-left: -20px;
