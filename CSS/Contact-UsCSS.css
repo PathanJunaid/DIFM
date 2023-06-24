@@ -4,10 +4,15 @@
 .h-50{
     min-height: 30vh;
 }
-#margin{
+.margin{
     margin-top: -8em;
+}
+.margin2{
+    margin-top: -5rem;
 }
 .marginb{
     margin-bottom: 8em;
 }
-
+.margin-text{
+    margin-top: -3rem;
+}
