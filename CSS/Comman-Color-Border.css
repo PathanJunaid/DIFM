@@ -32,6 +32,18 @@
 .fw-400{
     font-weight: 400;
 }
+.fs-12px{
+    font-size: 0.5rem;
+}
+.fs-1em{
+    font-size: 1em;
+}
+.fs-2em{
+    font-size: 1.2em;
+}
+.fs-18px{
+    font-size: 12px;
+}
 .cont1
 {
     border: 2px soild black;
@@ -41,9 +53,6 @@
     background: #F5F5F5;
     /* opacity: 0.6; */
 }
-.border-lightblue{
-    border: 2px solid #4D7CD3;
-}
 
 .font-roboto{
     font-weight: 'roboto' , sans-serif;
@@ -51,68 +60,33 @@
 .Image106{
     min-width: 75%;
 }
-.border-lightblue{
-    border: 2px solid #4D7CD3;
-}
 .rounded-500{
     border-radius: 1em;
 }
-
 /* footer CSS */
-#footer{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+
+.text-justify{
+    text-align: justify;
+  text-justify: inter-word;
 }
-.footerboxes{
-    min-width: 4%;
-}
-#footerbox1{
-    /* margin: auto; */
-    align-items: center;
-    max-width: 10%;
-}
-#footerbox2{
-    max-width: 30%;
-    font-size: small;
-}
-#footerbox5{
-    min-width: 25%;
-}
-ul{
-    list-style-type: none;
-}
-li{
-    font-size: small;
-    margin-bottom: 5%;
-}
-.img32-34{
-    margin-right: 1%;
-    margin-top: 2%;
-}
-#box5inp{
-    width: 55%;
-    height: 2em;
-    border-radius: 10px;
+.Subscribe-Border{
     border: 5px solid #4D7CD3;
-    padding: 1em;
-    /* margin-right: 20px; */
 }
-#box5btn{
-    width: 30%;
+.margin-over-footer{
+    margin-left: -2rem;
 }
-.margin-over{
-    margin-left: -20px;
-    /* z-index: 3; */
+.min-input-width{
+    min-width: 170px;
+}
+.Subscribe-Left-Round{
+    border-radius: 2rem;
 }
 
-.Footer-para-size{
-    font-size: 0.9em;
+.z-index-12{
+    z-index: 12;
 }
+
+/* End */
 .WRY-input-h{
     min-height: 8rem;
-}
-.Footer-h{
-    min-height: 12vh;
-    max-height: 18vh;
 }
