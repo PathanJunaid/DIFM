@@ -326,6 +326,9 @@ body{
 .Subscribe-Left-Round{
     border-radius: 2rem !important;
 }
+.rounded-500{
+    border-radius: 1em !important;
+}
 .z-index-12{
     z-index: 12;
 }

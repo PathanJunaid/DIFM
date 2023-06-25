@@ -1,34 +1,53 @@
-
-.Image-wh{
-    width: 100%;
-    height: 267px;
-}
-.Lawyers-Profile-wh{
+.Profile-Contact-W-H{
+    max-width: 1073px;
     height: 251px;
 }
-.Personal-Details-wh{
+.Lawyer-Profile-W-H{
+    max-width: 1073px;
     height: 481px;
 }
-.Services-wh{
-    height: 778px;
+.Infor-W-H{
+    max-width: 602px;
 }
-.Photos-wh{
-    height: 340px;
+.Expertise-Services-W-H{
+    max-width: 1073px;
+    height: 705px;
 }
-.Location-wh{
+.para-W-H{
+    max-width: 887px;
+    min-height: 152px;
+}
+.Photos-Section-W-H{
+    min-width: 394px;
+    height: 320px;
+}
+.Our-Location-W-H{
+    min-width: 394px;
     height: 244px;
 }
-.Friend-wh{
-    height: 100px;
+.Refer-Friend-W-H{
+    min-width: 394px;
+    height: 105px;
 }
-.URL-Copy-wh{
-    height: 100px;
+.Copy-URl-W-H{
+    min-width: 394px;
+    height: 95px;
 }
-.Top-Lawyers-wh{
-    height: 700px;
+.Top-Lawyers-W-H{
+    min-width: 394px;
+    height: 697px;
 }
-.other-lawyer-wh{
+.Top-lawyer-profile-W-H{
+    width: 360px;
     height: 92px;
+
+}
+.border-lightblue{
+    border: 2px solid #4D7CD3;
+    border-radius: 2rem;
+}
+.border-grey{
+    border: 2px solid rgba(51, 51, 51, 1);
 }
 .text-justify{
     text-align: justify;

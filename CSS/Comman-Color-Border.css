@@ -5,7 +5,7 @@
     color: #24478F;
 }
 .text-color-white{
-    color: #FFFFFF;
+    color: #FFFFFF !important;
 }
 .text-color-grey{
     color:#585858;
@@ -17,23 +17,28 @@
     background-color:#585858;
 }
 .bg-color-lightblue{
-    background: #4D7CD3;
-
+    background: #4D7CD3 !important;
+}
+.bg-color-lightblue-50{
+    background: rgba(77, 124, 211, 0.5);
 }
 .bg-color-white{
     background-color: #FFFFFF;
 }
+.fw-600{
+    font-weight: 600 !important;
+}
 .fw-500{
     font-weight: 500;
-}
-.fw-600{
-    font-weight: 600;
 }
 .fw-400{
     font-weight: 400;
 }
+.fw-300{
+    font-weight: 300;
+}
 .fs-12px{
-    font-size: 0.5rem;
+    font-size: 12px;
 }
 .fs-1em{
     font-size: 1em;
@@ -41,8 +46,26 @@
 .fs-2em{
     font-size: 1.2em;
 }
+.fs-16px{
+    font-size: 16px;
+}
 .fs-18px{
-    font-size: 12px;
+    font-size: 18px;
+}
+.fs-20px{
+    font-size: 20px;
+}
+.fs-24px{
+    font-size: 24px;
+}
+.fs-32px{
+    font-size: 32px;
+}
+.fs-36px{
+    font-size: 36px;
+}
+.fs-48px{
+    font-size: 48px;
 }
 .cont1
 {
@@ -70,16 +93,16 @@
   text-justify: inter-word;
 }
 .Subscribe-Border{
-    border: 5px solid #4D7CD3;
+    border: 5px solid #4D7CD3 !important;
 }
 .margin-over-footer{
-    margin-left: -2rem;
+    margin-left: -2rem !important;
 }
 .min-input-width{
-    min-width: 170px;
+    min-width: 170px !important;
 }
 .Subscribe-Left-Round{
-    border-radius: 2rem;
+    border-radius: 2rem !important;
 }
 
 .z-index-12{
