@@ -1,44 +1,37 @@
 .Profile-Contact-W-H{
-    max-width: 1073px;
     height: 251px;
 }
 .Lawyer-Profile-W-H{
-    max-width: 1073px;
     height: 481px;
 }
 .Infor-W-H{
     max-width: 602px;
 }
+.Img-H{
+    height: 267px;
+}
 .Expertise-Services-W-H{
-    max-width: 1073px;
     height: 705px;
 }
 .para-W-H{
-    max-width: 887px;
     min-height: 152px;
 }
 .Photos-Section-W-H{
-    min-width: 394px;
     height: 320px;
 }
 .Our-Location-W-H{
-    min-width: 394px;
     height: 244px;
 }
 .Refer-Friend-W-H{
-    min-width: 394px;
     height: 105px;
 }
 .Copy-URl-W-H{
-    min-width: 394px;
     height: 95px;
 }
 .Top-Lawyers-W-H{
-    min-width: 394px;
     height: 697px;
 }
 .Top-lawyer-profile-W-H{
-    width: 360px;
     height: 92px;
 
 }
