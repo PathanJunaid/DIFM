@@ -1,15 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>About us</title>
-        <link rel="icon" href="Images/Vector.png">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="CSS/About_US.css">
-        <link rel="stylesheet" href="CSS/Comman-Color-Border.css">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    </head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us</title>
+
+    <!-- DIFM LAW LOGO  -->
+    <link rel="icon" href="Images/Vector.png">
+
+    <!-- Bootstrap CSS file  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- External CSS  -->
+    <link rel="stylesheet" href="CSS/Comman-Color-Border.css">
+    <link rel="stylesheet" href="CSS/About_US.css">
+
+    <!-- Google Font Link  -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- Login Form JS  -->
+    <script src="js/Login.js"> </script>
+</head>
+
 <body class="font-roboto selector-for-some-widget">
 
     <!-- Navbar -->
@@ -29,7 +42,8 @@
                             LAW</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fs-5 textcolor fw-bold active me-md-5" href="Index.html" aria-current="page">Home</a>
+                        <a class="nav-link fs-5 textcolor fw-bold active me-md-5" href="Index.html"
+                            aria-current="page">Home</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link fs-5 textcolor fw-bold active me-md-5" href="#" aria-expanded="false">
@@ -42,9 +56,10 @@
                     </li>
                 </ul>
                 <div class="dropdown">
-                    <span class="d-block fw-bold fontcolor mb-3 mb-lg-0 d-lg-inline me-lg-5 fs-5 textcolor">Login</span>
+                    <button
+                        class="d-block fw-bold fontcolor mb-3 mb-lg-0 d-lg-inline me-lg-5 fs-5 textcolor border border-0 bg-light">Login</button>
                     <button class="bg-color-blue px-5 py-2 border rounded-3 text-color-white fw-normal px-4"
-                        id="nameborder" type="button" id="" aria-expanded="false">
+                        id="nameborder" type="button" id="" aria-expanded="false" onclick="signuphover()">
                         Sign Up
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
@@ -56,182 +71,312 @@
             </div>
         </div>
     </nav>
+
+    <!-- Sign UP FORMS -->
+
+    <div class="w-100 vh-100 position-fixed box-shadow-login" id="hideover-lay">
+        <div class="container position-absolute top-50 start-50 translate-middle">
+            <div class="d-flex">
+                <button class="fs-24px px-5 py-3 fw-500 border-0" onclick="lawyersignup()" id="colorwl">Lawyer</button>
+                <button class="fs-24px px-5 py-3 fw-500 border-0" onclick="usersignup()" id="colorbu">User</button>
+            </div>
+            <div class="bg-color-white container Form-H py-5">
+
+                <!-- User Sign Up Form -->
+                <form action="" class="" id="showu">
+
+                    <div class="row justify-content-center justify-content-lg-around my-lg-5">
+                        <div class="col-10 col-lg-4">
+                            <input type="text" value="Enter Full Name*"
+                                class="form-control border border-top-0 border-end-0 border-start-0 border-bottom-3 rounded-0 fs-18px py-1 my-2 text-color-grey fw-400 border-secondary-subtle">
+                        </div>
+                        <div class="col-10 col-lg-4">
+                            <input type="email" name="" value="Enter your Email*"
+                                class="form-control border border-top-0 border-end-0 border-start-0 border-bottom-3 rounded-0 fs-18px py-1 my-2 text-color-grey fw-400 border-secondary-subtle">
+                        </div>
+                    </div>
+                    <div class="row justify-content-center justify-content-lg-around my-lg-5">
+                        <div class="col-10 col-lg-4">
+                            <input type="text" value="Phone Number*"
+                                class="form-control border border-top-0 border-end-0 border-start-0 border-bottom-3 rounded-0 fs-18px py-1 my-2 text-color-grey fw-400 border-secondary-subtle">
+                        </div>
+                        <div class="col-10 col-lg-4">
+                            <input type="text" value="State"
+                                class="form-control border border-top-0 border-end-0 border-start-0 border-bottom-3 rounded-0 fs-18px py-1 my-2 text-color-grey fw-400 border-secondary-subtle">
+                        </div>
+                    </div>
+                    <div class="row justify-content-center justify-content-lg-around my-lg-5">
+                        <div class="col-10 col-lg-4">
+                            <input type="password" placeholder="Enter Password*"
+                                class="form-control border border-top-0 border-end-0 border-start-0 border-bottom-3 rounded-0 fs-18px py-1 my-2 text-color-grey fw-400 border-secondary-subtle">
+                        </div>
+                        <div class="col-10 col-lg-4">
+                            <input type="password" placeholder="Confirm Password*"
+                                class="form-control border border-top-0 border-end-0 border-start-0 border-bottom-3 rounded-0 fs-18px py-1 my-2 text-color-grey fw-400 border-secondary-subtle">
+                        </div>
+                    </div>
+
+                </form>
+                <!-- Lawyer Sign up From  -->
+                <form action="" class="" id="hiddenl">
+                    <div class="row justify-content-center justify-content-lg-around my-lg-5">
+                        <div class="col-10 col-lg-4">
+                            <input type="text" value="Enter Full Name*"
+                                class="form-control border border-top-0 border-end-0 border-start-0 border-bottom-3 rounded-0 fs-18px py-1 my-1 text-color-grey fw-400 border-secondary-subtle">
+                        </div>
+                        <div class="col-10 col-lg-4">
+                            <input type="email" name="" value="Enter your Email*"
+                                class="form-control border border-top-0 border-end-0 border-start-0 border-bottom-3 rounded-0 fs-18px py-1 my-1 text-color-grey fw-400 border-secondary-subtle">
+                        </div>
+                    </div>
+                    <div class="row justify-content-center justify-content-lg-around my-lg-5">
+                        <div class="col-10 col-lg-4">
+                            <input type="text" value="Phone Number*"
+                                class="form-control border border-top-0 border-end-0 border-start-0 border-bottom-3 rounded-0 fs-18px py-1 my-1 text-color-grey fw-400 border-secondary-subtle">
+                        </div>
+                        <div class="col-10 col-lg-4">
+                            <input type="text" value="Experience"
+                                class="form-control border border-top-0 border-end-0 border-start-0 border-bottom-3 rounded-0 fs-18px py-1 my-1 text-color-grey fw-400 border-secondary-subtle">
+                        </div>
+                    </div>
+                    <div class="row justify-content-center justify-content-lg-around my-lg-5">
+                        <div class="col-10 col-lg-4">
+                            <input type="password" placeholder="Specialization"
+                                class="form-control border border-top-0 border-end-0 border-start-0 border-bottom-3 rounded-0 fs-18px py-1 my-1 text-color-grey fw-400 border-secondary-subtle">
+                        </div>
+                        <div class="col-10 col-lg-4">
+                            <input type="password" placeholder="Enter or Choose Location"
+                                class="form-control border border-top-0 border-end-0 border-start-0 border-bottom-3 rounded-0 fs-18px py-1 my-1 text-color-grey fw-400 border-secondary-subtle">
+                        </div>
+                    </div>
+                    <div class="row justify-content-center justify-content-lg-around my-lg-5">
+                        <div class="col-10 col-lg-4">
+                            <input type="password" placeholder="Enter Password*"
+                                class="form-control border border-top-0 border-end-0 border-start-0 border-bottom-3 rounded-0 fs-18px py-1 my-1 text-color-grey fw-400 border-secondary-subtle">
+                        </div>
+                        <div class="col-10 col-lg-4">
+                            <input type="password" placeholder="Confirm Password*"
+                                class="form-control border border-top-0 border-end-0 border-start-0 border-bottom-3 rounded-0 fs-18px py-1 my-1 text-color-grey fw-400 border-secondary-subtle">
+                        </div>
+                    </div>
+                    
+
+                </form>
+                <div class="d-flex justify-content-center align-items-baseline mt-5">
+                    <button
+                        class="bg-color-blue text-color-white px-2 py-2 mx-auto fs-24px fw-600 border border-0 rounded-500">Register
+                        Now</button>
+                    <button
+                        class="bg-color-blue text-color-white px-3 py-2 mx-auto fs-24px fw-600 border border-0 rounded-500"
+                        onclick="signupclose()">Close</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- sign UP form End  -->
+
     <!-- About us Header -->
 
-    <div class="container-fluid">
-        <div class="row my-5 justify-content-center align-items-center">
-            <div class="col-7  fs-1 fw-600 text-center">
-                About Us
+    <div class="">
+        <div class="container-fluid">
+            <div class="row my-5 justify-content-center align-items-center">
+                <div class="col-7  fs-1 fw-600 text-center">
+                    About Us
+                </div>
+                <div class="col-7 text-center fs-5 fw-500 text-color-grey text-justify">
+                    Connecting lawyers and seekers from around the world in a seamless and efficient way is our mission
+                    at
+                    DIFM Law.
+                </div>
             </div>
-            <div class="col-7 text-center fs-5 fw-500 text-color-grey text-justify">
-                Connecting lawyers and seekers from around the world in a seamless and efficient way is our mission at DIFM Law.
+        </div>
+
+
+        <!-- Mid Container -->
+
+        <div class="container-fluid">
+            <div class="row justify-content-around">
+
+                <!-- Our Mission -->
+                <div class="row justify-content-center px-0 my-5">
+                    <div class="col-10 col-lg-5">
+                        <div class="row fs-1 fw-600 justify-content-center mb-2">
+                            Our Mission
+                        </div>
+                        <div class="row fs-5 fw-500 text-color-grey mb-lg-5 lh-sm text-justify">
+                            At DIFM Law, our mission is to connect lawyers and seekers from around the world in a
+                            seamless
+                            and efficient way. Our parent company, Do iT For Me LLC, has a long-standing reputation for
+                            providing innovative solutions for individuals and businesses alike.
+                        </div>
+                    </div>
+                    <div class="col-10 col-lg-5 z-index-5">
+                        <img src="Images/image 36.png" alt="" class="img-fluid mx-auto d-block">
+                    </div>
+                </div>
+
+                <!-- User-Friendly Platform -->
+                <div class="row justify-content-center px-0 my-5">
+                    <div class="col-10 col-lg-5 order-2 z-index-5 margin">
+                        <img src="Images/img_illustration-SEO-Friendly.png" alt=""
+                            class="img-fluid mt-5 mt-lg-0 pt-5 pt-lg-0">
+                    </div>
+                    <div class="col-10 col-lg-5 order-lg-2 pb-5 pt-lg-0">
+                        <div class="row fs-1 fw-600 justify-content-center mb-2">
+                            User-Friendly Platform
+                        </div>
+                        <div class="row fs-5 fw-500 text-color-grey lh-sm text-justify">
+                            Our platform was created to make the process of finding the right lawyer as simple as
+                            possible.
+                            We understand that the legal industry can be complex and overwhelming, and we wanted to make
+                            it easier for people to find the right legal representation.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Committed to Your Needs -->
+                <div class="row justify-content-center px-0 my-5">
+                    <div class="col-10 col-lg-5 pt-5">
+                        <div class="row fs-1 fw-600 justify-content-center mb-2 text-center lh-sm margin-text">Committed
+                            to
+                            Your Needs</div>
+                        <div class="row fs-5 fw-500 text-color-grey lh-sm text-justify">
+                            We believe that connecting seekers with the right lawyer can make all the difference, and
+                            we're
+                            passionate about making that happen. At DIFM Law, we're committed to providing you with the
+                            best
+                            possible experience, and we're always here to help you with any questions or concerns you
+                            may
+                            have.
+                            Our team of dedicated professionals is available to assist you with any inquiries you may
+                            have.
+                        </div>
+                    </div>
+                    <div class="col-10 col-lg-5">
+                        <img src="Images/VNU_M733_4 1.png" alt="" class="img-fluid mx-auto d-block">
+                    </div>
+                </div>
+                <!-- Our Promise -->
+                <div class="row justify-content-center px-0 my-5">
+                    <div class="col-10 col-lg-5 z-index-12 order-2 margin2">
+                        <img src="Images/Group.png" alt="" class="img-fluid mx-auto d-block mt-5 mt-lg-0 pt-5 pt-lg-0">
+                    </div>
+                    <div class="col-10 col-lg-5 order-lg-2">
+                        <div class="row fs-1 fw-600 justify-content-center mb-2">
+                            Our Promise
+                        </div>
+                        <div class="row fs-5 fw-500 text-color-grey lh-sm text-justify">
+                            We promise to provide a seamless experience for both lawyers and seekers, allowing them to
+                            find
+                            each
+                            other with ease. Our platform is dedicated to providing innovative solutions and making the
+                            process
+                            of finding the right lawyer as simple as possible.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid margin-btm">
+            <div
+                class="row justify-content-center justify-content-md-between align-items-center w-85 mx-auto box-shadow py-5 border rounded-3">
+                <div class="col-10 col-md-7 fs-1 fw-600 text-center">
+                    Want <span class="text-color-blue">Our Suggestions </span>?
+                </div>
+                <div class="col-10 col-md-4 mt-4 mt-md-0 mx-auto text-center">
+                    <a href="Contact-Us.html"
+                        class="text-decoration-none bg-color-lightblue border-lightblue text-color-white px-4 py-2 rounded-500">Contact
+                        Now</a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Footer Section -->
+        <div class="container-fluid mt-5 px-0 bg-color-darkwhite">
+            <div class="d-lg-flex justify-content-lg-between align-items-lg-center flex-nowrap py-5">
+                <div class="my-4 mx-3 px-4">
+                    <h2 class="py-3">DIFM LAW</h2>
+                    <div>
+                        <p class="text-break text-justify pb-3">
+                            We are a leading lawyer listing portal, dedicated to simplifying the process of connecting
+                            lawyers and clients.
+                        </p>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <img src="Images/image 32.png" alt="" class="img-fluid">
+                        <img src="Images/image 31.png" alt="" class="img-fluid">
+                        <img src="Images/image 33.png" alt="" class="img-fluid">
+                        <img src="Images/image 34.png" alt="" class="img-fluid">
+                    </div>
+                </div>
+
+                <!-- Display for large and Xl Display -->
+
+                <div class="my-4 mx-3 d-none d-lg-block ">
+                    <ul class="list-unstyled">
+                        <li class="fs-2em fw-600 ">Quick Links</li>
+                        <li class="fs-1em fw-400"><a href="Contact-Us.html"
+                                class="text-decoration-none textcolor">Contact</a></li>
+                        <li class="fs-1em fw-400"><a href="About_Us.html"
+                                class="text-decoration-none textcolor">About</a>
+                        </li>
+                        <li class="fs-1em fw-400">Lawyers</li>
+                    </ul>
+                </div>
+
+                <!-- Display for large and Xl Display -->
+
+                <div class="my-4 mx-3 d-none d-lg-block px-4">
+                    <ul class="list-unstyled">
+                        <li class="fs-2em fw-600">DIFM Group</li>
+                        <li class="fs-1em fw-400">Difm.llc</li>
+                        <li class="fs-1em fw-400">Worldmodelhunt.com</li>
+                        <li class="fs-1em fw-400">BragSocial.com</li>
+                    </ul>
+                </div>
+
+                <!-- Display for medium and small Display -->
+
+                <div class="d-flex mx-3 justify-content-between d-lg-none d-xl-none d-xxl-none">
+                    <div class="my-4 mx-3">
+                        <ul class="list-unstyled">
+                            <li class="fs-2em fw-600">Quick Links</li>
+                            <li class="fs-1em fw-400"><a href="Contact-Us.html"
+                                    class="text-decoration-none textcolor">Contact</a></li>
+                            <li class="fs-1em fw-400"><a href="About_Us.html"
+                                    class="text-decoration-none textcolor">About</a></li>
+                            <li class="fs-1em fw-400">Lawyers</li>
+                        </ul>
+                    </div>
+                    <div class="my-4 mx-3">
+                        <ul class="list-unstyled">
+                            <li class="fs-2em fw-600">DIFM Group</li>
+                            <li class="fs-1em fw-400">Difm.llc</li>
+                            <li class="fs-1em fw-400">Worldmodelhunt.com</li>
+                            <li class="fs-1em fw-400">BragSocial.com</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="my-4 mx-3 px-4">
+                    <div class="input-group">
+                        <input type="email" class="form-control Subscribe-Border rounded-500 min-input-width"
+                            placeholder="Enter Your Email" aria-label="Recipient's username"
+                            aria-describedby="basic-addon2">
+                        <span
+                            class="input-group-text bg-color-lightblue text-color-white Subscribe-Border z-index-12 margin-over-footer fw-600 Subscribe-Left-Round"
+                            id="">Subscribe</span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
-
-    <!-- Mid Container -->
-
-    <div class="container-fluid">
-        <div class="row justify-content-around">
-
-            <!-- Our Mission -->
-            <div class="row justify-content-center px-0 my-5">
-                <div class="col-10 col-lg-5">
-                    <div class="row fs-1 fw-600 justify-content-center mb-2">
-                        Our Mission
-                    </div>
-                    <div class="row fs-5 fw-500 text-color-grey mb-lg-5 lh-sm text-justify">
-                            At DIFM Law, our mission is to connect lawyers and seekers from around the world in a seamless
-                         and efficient way. Our parent company, Do iT For Me LLC, has a long-standing reputation for 
-                         providing innovative solutions for individuals and businesses alike.
-                    </div>
-                </div>
-                <div class="col-10 col-lg-5 z-index-5">
-                    <img src="Images/image 36.png" alt="" class="img-fluid mx-auto d-block">
-                </div>
-            </div>
-
-            <!-- User-Friendly Platform -->
-            <div class="row justify-content-center px-0 my-5">
-                <div class="col-10 col-lg-5 order-2 z-index-5 margin">
-                    <img src="Images/img_illustration-SEO-Friendly.png" alt="" class="img-fluid mt-5 mt-lg-0 pt-5 pt-lg-0">
-                </div>
-                <div class="col-10 col-lg-5 order-lg-2 pb-5 pt-lg-0">
-                    <div class="row fs-1 fw-600 justify-content-center mb-2">
-                        User-Friendly Platform
-                    </div>
-                    <div class="row fs-5 fw-500 text-color-grey lh-sm text-justify">
-                        Our platform was created to make the process of finding the right lawyer as simple as possible.
-                         We understand that the legal industry can be complex and overwhelming, and we wanted to make 
-                         it easier for people to find the right legal representation.
-                    </div>
-                </div>
-            </div>
-
-            <!-- Committed to Your Needs -->
-            <div class="row justify-content-center px-0 my-5">
-                <div class="col-10 col-lg-5 pt-5">
-                    <div class="row fs-1 fw-600 justify-content-center mb-2 text-center lh-sm margin-text">Committed to Your Needs</div>
-                    <div class="row fs-5 fw-500 text-color-grey lh-sm text-justify">
-                        We believe that connecting seekers with the right lawyer can make all the difference, and we're 
-                        passionate about making that happen. At DIFM Law, we're committed to providing you with the best 
-                        possible experience, and we're always here to help you with any questions or concerns you may have.
-                        Our team of dedicated professionals is available to assist you with any inquiries you may have.
-                    </div>
-                </div>
-                <div class="col-10 col-lg-5">
-                    <img src="Images/VNU_M733_4 1.png" alt="" class="img-fluid mx-auto d-block">
-                </div>
-            </div>
-            <!-- Our Promise -->
-            <div class="row justify-content-center px-0 my-5">
-                <div class="col-10 col-lg-5 z-index-12 order-2 margin2">
-                    <img src="Images/Group.png" alt="" class="img-fluid mx-auto d-block mt-5 mt-lg-0 pt-5 pt-lg-0">
-                </div>
-                <div class="col-10 col-lg-5 order-lg-2">
-                    <div class="row fs-1 fw-600 justify-content-center mb-2">
-                        Our Promise
-                    </div>
-                    <div class="row fs-5 fw-500 text-color-grey lh-sm text-justify">
-                        We promise to provide a seamless experience for both lawyers and seekers, allowing them to find each 
-                        other with ease. Our platform is dedicated to providing innovative solutions and making the process 
-                        of finding the right lawyer as simple as possible.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container-fluid margin-btm">
-        <div class="row justify-content-center justify-content-md-between align-items-center w-85 mx-auto box-shadow py-5 border rounded-3">
-            <div class="col-10 col-md-7 fs-1 fw-600 text-center">
-                Want <span class="text-color-blue">Our Suggestions </span>?
-            </div>
-            <div class="col-10 col-md-4 mt-4 mt-md-0 mx-auto text-center">
-                <a href="Contact-Us.html" class="text-decoration-none bg-color-lightblue border-lightblue text-color-white px-4 py-2 rounded-500">Contact Now</a>
-            </div>
-        </div>
-    </div>
-
-
-<!-- Footer Section -->
-<div class="container-fluid mt-5 px-0 bg-color-darkwhite">
-    <div class="d-lg-flex justify-content-lg-between align-items-lg-center flex-nowrap py-5">
-        <div class="my-4 mx-3 px-4">
-            <h2 class="py-3">DIFM LAW</h2>
-            <div>
-                <p class="text-break text-justify pb-3">
-                    We are a leading lawyer listing portal, dedicated to simplifying the process of connecting
-                    lawyers and clients.
-                </p>
-            </div>
-            <div class="d-flex justify-content-between">
-                <img src="Images/image 32.png" alt="" class="img-fluid">
-                <img src="Images/image 31.png" alt="" class="img-fluid">
-                <img src="Images/image 33.png" alt="" class="img-fluid">
-                <img src="Images/image 34.png" alt="" class="img-fluid">
-            </div>
-        </div>
-
-        <!-- Display for large and Xl Display -->
-
-        <div class="my-4 mx-3 d-none d-lg-block ">
-            <ul class="list-unstyled">
-                <li class="fs-2em fw-600 ">Quick Links</li>
-                <li class="fs-1em fw-400"><a href="Contact-Us.html" class="text-decoration-none textcolor">Contact</a></li>
-                    <li class="fs-1em fw-400"><a href="About_Us.html" class="text-decoration-none textcolor">About</a></li>
-                <li class="fs-1em fw-400">Lawyers</li>
-            </ul>
-        </div>
-
-        <!-- Display for large and Xl Display -->
-
-        <div class="my-4 mx-3 d-none d-lg-block px-4">
-            <ul class="list-unstyled">
-                <li class="fs-2em fw-600">DIFM Group</li>
-                <li class="fs-1em fw-400">Difm.llc</li>
-                <li class="fs-1em fw-400">Worldmodelhunt.com</li>
-                <li class="fs-1em fw-400">BragSocial.com</li>
-            </ul>
-        </div>
-
-        <!-- Display for medium and small Display -->
-
-        <div class="d-flex mx-3 justify-content-between d-lg-none d-xl-none d-xxl-none">
-            <div class="my-4 mx-3">
-                <ul class="list-unstyled">
-                    <li class="fs-2em fw-600">Quick Links</li>
-                    <li class="fs-1em fw-400"><a href="Contact-Us.html" class="text-decoration-none textcolor">Contact</a></li>
-                        <li class="fs-1em fw-400"><a href="About_Us.html" class="text-decoration-none textcolor">About</a></li>
-                    <li class="fs-1em fw-400">Lawyers</li>
-                </ul>
-            </div>
-            <div class="my-4 mx-3">
-                <ul class="list-unstyled">
-                    <li class="fs-2em fw-600">DIFM Group</li>
-                    <li class="fs-1em fw-400">Difm.llc</li>
-                    <li class="fs-1em fw-400">Worldmodelhunt.com</li>
-                    <li class="fs-1em fw-400">BragSocial.com</li>
-                </ul>
-            </div>
-
-        </div>
-
-        <div class="my-4 mx-3 px-4">
-            <div class="input-group">
-                <input type="email" class="form-control Subscribe-Border rounded-500 min-input-width"
-                    placeholder="Enter Your Email" aria-label="Recipient's username"
-                    aria-describedby="basic-addon2">
-                <span
-                    class="input-group-text bg-color-lightblue text-color-white Subscribe-Border z-index-12 margin-over-footer fw-600 Subscribe-Left-Round"
-                    id="">Subscribe</span>
-            </div>
-        </div>
-    </div>
-</div>
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
