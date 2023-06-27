@@ -112,7 +112,10 @@
 }
 
 .z-index-12{
-    z-index: 12;
+    z-index: 5;
+}
+.z-index-10{
+    z-index: 10;
 }
 
 /* End */
@@ -124,8 +127,9 @@
 /* Form CSS */
 #showover-lay{
     opacity: 1;
-    z-index: 13;
+    z-index: 6;
     transition: 0.3s;
+    background: rgb(77,124,211, 0.8);
     backdrop-filter: blur(3px);
 }
 #hideover-lay{
@@ -148,19 +152,19 @@
 }
 #colorbl{
     color: #24478F;
-    background-color: #FFFFFF;
+    background-color: #eef1f7;
 }
 #colorbu{
     color: #24478F;
-    background-color: #FFFFFF;
+    background-color: #eef1f7;
 }
 #colorwl{
-    color: #FFFFFF;
+    color: #eef1f7;
     background-color: #24478F;
 
 }
 #colorwu{
-    color: #FFFFFF;
+    color: #eef1f7;
     background-color: #24478F;
 }
 .Form-H{
@@ -168,4 +172,7 @@
 }
 .box-shadow-login{
     box-shadow: 0px 0px 10px;
+}
+.bg-color-login{
+    background-color: #eef1f7;
 }

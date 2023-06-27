@@ -8,6 +8,9 @@ function signupclose() {
     console.log("Done")
     document.body.style.overflow="scroll"
 }
+function Login_Page_onclick(event)   {
+    event.cancelBubble=true;if (event.stopPropagation) event.stopPropagation();
+}
 function lawyersignup() {
     document.querySelector('#hiddenl').id = "showl";
     document.querySelector('#showu').id = "hiddenu";
