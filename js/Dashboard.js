@@ -1,7 +1,9 @@
+// Main Table Data 
+
 var id1 = document.getElementById('Table1');
 var tr = id1.getElementsByTagName("tr");
 
-
+// Edit Button 
 function Edit(key){
     let id  = tr[key];
     console.log(id)
@@ -10,6 +12,7 @@ function Edit(key){
         console.log(td[i].getElementsByTagName('input')[0].removeAttribute("disabled"));
     }
 }
+// Submit Button 
 function Submit(key){
     let id  = tr[key];
     console.log(id)
@@ -24,6 +27,8 @@ function Submit(key){
         td[i].getElementsByTagName('input')[0].disabled=true;
     }
 }
+
+// View Button Function 
 function View(val){
     let data = document.querySelector(`#${val}`)
     data.classList.add("position-fixed");
@@ -31,6 +36,9 @@ function View(val){
     console.log(val)
     
 }
+
+// Cancel View Button Modal 
+
 function Cancel(){
     let Data_class = document.querySelectorAll('.Data')
     for(key in Data_class){
@@ -42,6 +50,9 @@ function Cancel(){
         }
     }  
 }
+
+// Delete table data 
+
 function Trash(val){
     let id=document.querySelector(`#${val}`)
     id.classList.add('d-none')
