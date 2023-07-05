@@ -3,6 +3,7 @@
 }
 .text-color-blue{
     color: #24478F;
+    
 }
 .text-color-skyblue{
     color: #61A1F0;
@@ -127,7 +128,7 @@
 }
 
 
-/* Form CSS */
+/*Sign-Up Form CSS */
 #showover-lay{
     opacity: 1;
     z-index: 6;
@@ -135,6 +136,7 @@
     transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
     background: rgb(77,124,211, 0.8);
     backdrop-filter: blur(3px);
+    overflow: none;
 }
 #hideover-lay{
     opacity: 0;
@@ -172,7 +174,7 @@
     background-color: #24478F;
 }
 .Form-H{
-    height: 600.71px;
+    /* height: 600.71px;x */
 }
 .box-shadow-login{
     box-shadow: 0px 0px 10px;
@@ -180,3 +182,4 @@
 .bg-color-login{
     background-color: #eef1f7;
 }
+/* Sign-Up form CSS end  */

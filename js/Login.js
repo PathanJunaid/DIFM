@@ -2,6 +2,7 @@ function signuphover() {
     let id = document.querySelector('#hideover-lay').id = "showover-lay";
     console.log("Done")
     document.body.style.overflow = "hidden"
+    document.getElementById('Child').style.overflow = "auto"
 }
 function signupclose() {
     let id = document.querySelector('#showover-lay').id = "hideover-lay";
@@ -25,7 +26,7 @@ function usersignup() {
 
     console.log("Done")
 }
-var User_Data=0;
+var User_Data = 0;
 // User Form Valiation 
 
 function validate_User_Name(value) {
@@ -137,7 +138,7 @@ function Confirm_User_Password(val) {
     }
 }
 // User Form Validation End
-var Laywer_Data=0;
+var Laywer_Data = 0;
 // Lawyers Form Validation
 function validate_Lawyer_Name(value) {
     var regex = /^[a-zA-Z ]{3,30}$/;
@@ -228,15 +229,9 @@ function validate_Lawyer_Password(value) {
             }
             else {
                 div.innerHTML = "";
+                Laywer_Data++
             }
-
         }
-        else {
-            div.innerHTML = "";
-            Laywer_Data++
-        }
-    } else {
-        div.innerHTML = "";
     }
 }
 function Confirm_Lawyer_Password(val) {
@@ -256,18 +251,22 @@ function Confirm_Lawyer_Password(val) {
 // Laywer Form End 
 
 // Submit Button 
-function Alert_Msg() {
+function Alert_Msg_User() {
     var User_Name = document.querySelector('#User_Name').value;
     console.log(User_Name)
-    var Lawyer_Name = document.querySelector('#Lawyer_Name').value;
-    console.log(Lawyer_Name)
-    if (Lawyer_Name == "" && User_Name != "") {
-        if(User_Data==6){
+
+    if (User_Name != "") {
+        if (User_Data == 6) {
             alert(User_Name + "\nThank You for Your Registration")
         }
     }
-    else if (User_Name == "" && Lawyer_Name != "") {
-        if(Laywer_Data>=6){
+
+}
+function Alert_Msg_Lawyer() {
+    var Lawyer_Name = document.querySelector('#Lawyer_Name').value;
+    console.log(Lawyer_Name)
+    if (Lawyer_Name != "") {
+        if (Laywer_Data >= 6) {
             alert(Lawyer_Name + "\nThank You for Your Registration")
         }
     }
