@@ -221,9 +221,7 @@ function validate_Lawyer_Password(value) {
     var User_Number = document.querySelector('#Lawyer_Password');
     var val = regex.test(User_Number.value);
     var div = document.querySelector('.invalid_Lawyer_Password')
-    if (User_Number.value != "") {
-
-        if (User_Name.value != "") {
+        if (User_Number.value != "") {
             if (!val) {
                 div.innerHTML = "Password Must be of Least 10 digits";
             }
@@ -232,8 +230,10 @@ function validate_Lawyer_Password(value) {
                 Laywer_Data++
             }
         }
+        else {
+            div.innerHTML = "";
+        }
     }
-}
 function Confirm_Lawyer_Password(val) {
     var User_Password = document.querySelector('#Lawyer_Password').value;
     var User_CPassword = document.querySelector('#Lawyer_CPassword').value;
