@@ -141,7 +141,7 @@
 #hideover-lay{
     opacity: 0;
     z-index: -1;
-    transition-duration: 1s;
+    transition-duration: 0.3s;
     backdrop-filter: blur(0px);
 }
 #showl{

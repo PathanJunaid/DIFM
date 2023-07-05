@@ -1,0 +1,14 @@
+.bg-color-thead{
+    background: rgba(217, 217, 217, 0.3) !important;
+}
+.hover-cursor:hover{
+    cursor: pointer;
+}
+#Data_1{
+    opacity: 1;
+    z-index: 15 !important;
+}
+.hover-color:hover{
+    background: #e2e3e5;
+
+}
