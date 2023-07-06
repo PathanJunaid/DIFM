@@ -59,3 +59,19 @@ function Trash(val){
     console.log(id);
 }
 
+function mouseover_tr(val){
+    var td = tr[val].getElementsByTagName('td');
+    for(let i=0;i<4;i++){
+        var inp = td[i].getElementsByTagName('input')[0];
+        inp.style.background="rgba(255,255,255,.1)";
+        console.log(inp);
+    }
+    }
+function mouseleave_tr(val){
+    var td = tr[val].getElementsByTagName('td');
+    for(let i=0;i<4;i++){
+        var inp = td[i].getElementsByTagName('input')[0];
+        inp.style.background="#fff";
+        console.log(inp);
+    }
+    }
