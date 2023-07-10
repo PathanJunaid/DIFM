@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -85,46 +86,51 @@
                         $Expert = $row['Expertise_In'];
                         echo "
                         <div class='d-none hidden vh-100 w-100 bg-color-thead Data' id='Data_$ID' onclick='Cancel()'>
-                    <div class='position-absolute top-50 start-50 translate-middle w-75'>
-                    <form method='post' action='php/Update_Data.php?id=$ID' id='Update_$ID' onclick='Login_Page_onclick(event)' class='bg-color-white border rounded-500'>
-                    <fieldset class='table w-75 mx-auto py-4' id='Table_$ID'>
-                    <div class='row'>
-                    <div class='col-4'>
-                    <label  class='fw-500'>User Name : </label>
-                    </div>
-                    <div class='col-6'>
-                    <input type='text' value='$User' class='border border-0 bg-color-white ps-5 w-75' name='User'>
-                    </div>
-                    </div>
-                            <div class='row'>
-                    <div class='col-4'>
-                    <label class='fw-500'>Availabilty : </label>
-                    </div>
-                    <div class='col-6'>
-                    <input type='text' value='$Avail' class='border border-0 bg-color-white ps-5 w-75' name='Avai'>
-                    </div>
-                    </div>
-                            <div class='row'>
-                    <div class='col-4'>
-                    <label class='fw-500'>Date : </label>
-                    </div>
-                    <div class='col-6'>
-                    <input type='text' value='$Date' class='border border-0 bg-color-white ps-5 w-75' name='Date' disabled>
-                    </div>
-                    </div>
-                            <div class='row'>
-                    <div class='col-4'>
-                    <label class='fw-500'>Expertise In : </label>
-                    </div>
-                    <div class='col-6'>
-                    <input type='text' value='$Expert' class='border border-0 bg-color-white ps-5 w-75' name='Exper'>
-                    </div>
-                    </div>
-                            <input type='submit' name='submit' value='Update' class='w-25 bg-color-lightblue text-color-white my-5 mx-auto form-control d-none confirm' id='confirm_$ID'>
-                    </fieldset>
-                </form>
-                    </div>
-                </div>
+                            <div class='position-absolute top-50 start-50 translate-middle w-75'>
+                                <form method='post' action='php/Update_Data.php?id=$ID' id='Update_$ID' onclick='Login_Page_onclick(event)'
+                                    class='bg-color-white border rounded-500'>
+                                    <fieldset class='table w-75 mx-auto py-4' id='Table_$ID'>
+                                        <div class='row'>
+                                            <div class='col-4'>
+                                                <label class='fw-500'>User Name : </label>
+                                            </div>
+                                            <div class='col-6'>
+                                                <input type='text' value='$User' class='border border-0 bg-color-white ps-5 w-75' name='User'>
+                                            </div>
+                                        </div>
+                                        <div class='row'>
+                                            <div class='col-4'>
+                                                <label class='fw-500'>Availabilty : </label>
+                                            </div>
+                                            <div class='col-6'>
+                                                <input type='text' value='$Avail' class='border border-0 bg-color-white ps-5 w-75' name='Avai'>
+                                            </div>
+                                        </div>
+                                        <div class='row'>
+                                            <div class='col-4'>
+                                                <label class='fw-500'>Date : </label>
+                                            </div>
+                                            <div class='col-6'>
+                                                <input type='text' value='$Date' class='border border-0 bg-color-white ps-5 w-75' name='Date'
+                                                    disabled>
+                                            </div>
+                                        </div>
+                                        <div class='row'>
+                                            <div class='col-4'>
+                                                <label class='fw-500'>Expertise In : </label>
+                                            </div>
+                                            <div class='col-6'>
+                                                <input type='text' value='$Expert' class='border border-0 bg-color-white ps-5 w-75'
+                                                    name='Exper'>
+                                            </div>
+                                        </div>
+                                        <input type='submit' name='submit' value='Update'
+                                            class='w-25 bg-color-lightblue text-color-white my-5 mx-auto form-control d-none confirm'
+                                            id='confirm_$ID'>
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
                         ";    
                     }
                 }
@@ -137,14 +143,16 @@
     <div class="d-none hidden vh-100 w-100 bg-color-thead Data" id="Data_8" onclick="Cancel()">
         <div class="position-absolute top-50 start-50 translate-middle w-75">
             <fieldset>
-                <form method="post" action="php/Post_data.php" class="w-50 mx-auto p-5 fieldset-color" onclick="Login_Page_onclick(event)">
+                <form method="post" action="php/Post_data.php" class="w-50 mx-auto p-5 fieldset-color"
+                    onclick="Login_Page_onclick(event)">
                     <label for="User_Name">User Name</label>
                     <input type="text" class="form-control" required name="User_Name">
                     <label for="Availabilty">Availabilty</label>
                     <input type="text" class="form-control" required name="Avail">
                     <label for="Expertise_In">Expertise In</label>
                     <input type="text" class="form-control" required name="Expert">
-                    <input type="submit" name="submit" value="Add" class="w-25 bg-color-lightblue text-color-white my-5 mx-auto form-control">
+                    <input type="submit" name="submit" value="Add"
+                        class="w-25 bg-color-lightblue text-color-white my-5 mx-auto form-control">
                 </form>
 
             </fieldset>
@@ -152,50 +160,49 @@
     </div>
     <!-- Middle Container  -->
     <div class="container-fluid">
-    <!-- Dropdown Filter  -->
-    <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
-                data-bs-toggle="dropdown" aria-expanded="false">
-                Filter
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-        </div>
-    <!-- Table Data  -->
-    <div class="w-75 mx-auto">
-    
-                
-            <table class="table table-hover table-borderless" id="Table1">
+        <!-- Table Data  -->
+        <div class="w-75 mx-auto">
+        
+            <form method='' action='' class='mt-5 mb-2' id='Searching'>
+                <input type='Search' placeholder='Search using Filter' class='Search form-control d-inline w-50 my-2 border-2 py-2' name='Search' id='Search' onkeyup='SearchF(value)' required>
+                <select class="mx-3 px-4 py-2 border-3 border-dark rounded-3 fw-500 bg-dark text-white" id='Selected' >
+                    <option value="User Name">Name</option>
+                    <option value="Lawyer Time">Lawyer Time</option>
+                    <option value="Request Date">Date</option>
+                    <option value="Expertise_In">Expertise_In</option>
+                </select>
+                <p class='text-danger d-none valid'>No Record found</p>
+            </form>   
+            <table class='table table-hover table-borderless' id='Table1'>
 
-    <!-- Table Header  -->
-    <thead>
+                <!-- Table Header  -->
+                <thead>
                     <tr>
-                        <th class="bg-color-thead fs-6">User Name</th>
-                        <th class="bg-color-thead fs-6">Lawyer Time</th>
-                        <th class="bg-color-thead fs-6">Request Date</th>
-                        <th class="bg-color-thead fs-6">Expertise In</th>
-                        <th class="bg-color-thead fs-6">Action</th>
+                        <th class='bg-color-thead fs-6'>User Name</th>
+                        <th class='bg-color-thead fs-6'>Lawyer Time</th>
+                        <th class='bg-color-thead fs-6'>Request Date</th>
+                        <th class='bg-color-thead fs-6'>Expertise In</th>
+                        <th class='bg-color-thead fs-6'>Action</th>
                     </tr>
                 </thead>
                 <?php
+                // include('php/Search_Data.php');
                 include("php/Get_Data.php");
-                ?> 
+                ?>
             </table>
             <!-- <div class="w-25 bg-color-lightblue text-color-white my-5 mx-auto form-control" onclick="View('Data_8')" >Add Lawyers</div> -->
-            <input type="button" onclick="View(Data_8)" value="Add Lawyers" class="w-25 bg-color-lightblue text-color-white my-5 mx-auto form-control">
-            
+            <input type="button" onclick="View(Data_8)" value="Add Lawyers"
+                class="w-25 bg-color-lightblue text-color-white my-5 mx-auto form-control">
+
         </div>
 
-    <!-- </div> -->
-    
-    <!-- Bootstrap JS file  -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- </div> -->
 
-    <!-- JS File  -->
-    <script src="js/Dashboard.js"></script>
+        <!-- Bootstrap JS file  -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+        <!-- JS File  -->
+        <script src="js/Dashboard.js"></script>
 </body>
 
 </html>

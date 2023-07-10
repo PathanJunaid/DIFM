@@ -84,3 +84,30 @@ function mouseleave_tr(val){
         inp.style.background="#fff";
     }
     }
+    function SearchF(val)
+    {
+        
+        let arr = ['User Name','Lawyer Time','Request Date','Expertise_In']
+        let count =0;
+        for(let i=1;i<tr.length;i++){
+            let filter = document.getElementById('Selected').value;
+            let filter_val = arr.indexOf(filter,0);
+            let name = tr[i].getElementsByTagName('td')[filter_val].getElementsByTagName('input')[0].value.toUpperCase();
+            val = val.toUpperCase();
+            if(name.indexOf(val)<0){
+                tr[i].classList.add('d-none')
+            }
+            else{
+                tr[i].classList.remove('d-none')
+                count++;
+            }
+        }
+        if(count<=0 && val.length>0){
+            document.querySelector('.valid').classList.remove('d-none')
+        }
+        else{
+            document.querySelector('.valid').classList.add('d-none')
+            
+        }
+    }
+    
