@@ -27,6 +27,7 @@ function Submit(i,pkey){
         td[i].getElementsByTagName('input')[0].disabled=true;
         inputs[i].value=val;
     }
+    console.log(document.getElementById(`Update_${pkey}`).submit())
 }
 
 // View Button Function 

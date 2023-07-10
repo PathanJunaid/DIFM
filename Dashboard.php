@@ -124,9 +124,6 @@
                                                     name='Exper'>
                                             </div>
                                         </div>
-                                        <input type='submit' name='submit' value='Update'
-                                            class='w-25 bg-color-lightblue text-color-white my-5 mx-auto form-control d-none confirm'
-                                            id='confirm_$ID'>
                                     </fieldset>
                                 </form>
                             </div>

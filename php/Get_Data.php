@@ -26,7 +26,11 @@ if($result->num_rows >0){
                     <td><input type='text' name='Exper' value='$Expert' class=' border-0 bg-color-white hover-color' disabled></td>
                 
                     <td class='d-flex justify-content-between'>
-                        <img src='Images/Group 17.png' class='img-fluid hover-cursor' onclick='Submit($i,$ID); View(Data_$ID)'>
+                    <button type='submit' name='submit' value='Update' form = 'Update_$ID'
+                                            class='confirm border border-0 bg-color-white'
+                                            id='confirm_$ID'>
+                        <img src='Images/Group 17.png' class='img-fluid hover-cursor' onclick='Submit($i,$ID)'>
+                        </button>
                         <img src='Images/Group 3.png' class='img-fluid hover-cursor' onclick='View(Data_$ID)'>
                     
                         <img src='Images/edit-2.png' class='img-fluid hover-cursor' onclick='Edit($i)'>
