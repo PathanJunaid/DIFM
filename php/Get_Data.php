@@ -4,6 +4,7 @@ $conn = new mysqli("localhost",'root',"",'crud_operation');
 // $avail="";
 // $Date="";
 // $Expert="";
+
 $sql = "SELECT * FROM lawyer_discription";
 $result = $conn->query($sql);
 $i=0;
@@ -42,6 +43,7 @@ if($result->num_rows >0){
 else{
     echo "No Data";
 }
+
 ?>
 
 <!-- <input type='Submit' name='Del' Value='$ID'> -->
