@@ -170,13 +170,13 @@
     color: #eef1f7;
     background-color: #24478F;
 }
-.Form-H{
-    /* height: 600.71px;x */
-}
 .box-shadow-login{
     box-shadow: 0px 0px 10px;
 }
 .bg-color-login{
     background-color: #eef1f7;
+}
+.top-40{
+    top: 40% !important;
 }
 /* Sign-Up form CSS end  */

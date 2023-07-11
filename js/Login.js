@@ -271,3 +271,17 @@ function Alert_Msg_Lawyer() {
         }
     }
 }
+
+// Navbar closing js onclick signup Button 
+
+async function navbar_closed(){
+    let p = new Promise((resolve,reject)=>{
+        var button = document.querySelector('.button-1')
+        button.classList.add('collapsed');
+        button.setAttribute("aria-expanded","false")
+        var div = document.querySelector('.its')
+        div.classList.remove('show');
+    });
+    let val= await p;
+    console.log(val);
+}
