@@ -320,9 +320,6 @@ body{
 .margin-over-footer{
     margin-left: -2rem !important;
 }
-.min-input-width{
-    min-width: 170px !important;
-}
 .Subscribe-Left-Round{
     border-radius: 2rem !important;
 }
