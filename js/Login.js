@@ -295,8 +295,20 @@ async function navbar_closed(){
 function login(){
     let show = document.querySelector('#login_hide').setAttribute('id','login_show');
     console.log(show)
+    document.body.style.overflow="hidden"
 }
 function login_hide(){
     let show = document.querySelector('#login_show').setAttribute('id','login_hide');
     console.log(show)
+    document.body.style.overflow="scroll"
 }
+function Subscribed(val){
+    let btn = document.getElementById('Subscribe');
+    btn.classList.remove('d-none');
+    setTimeout(change,5000);
+    function change(){
+        btn.classList.add('d-none');
+    }
+}
+
+// Login form js end 
