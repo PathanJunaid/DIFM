@@ -19,7 +19,7 @@
 
 </head>
 
-<body>
+<body class='font-roboto'>
     <!-- Navbar -->
     <nav class="sticky-top navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid mx-5 my-2">
