@@ -23,9 +23,190 @@
 </head>
 
 <body class="font-roboto selector-for-some-widget">
-
+    
+        <!-- Sign in Form -->
+        <div class="position-fixed w-100 vh-100 box-shadow-login bg-blur" id="login_hide" onclick="login_hide()">
+            <div class="position-absolute top-50 start-50 translate-middle z-index-10 container">
+                <div class="w-100 mx-auto" onclick="Login_Page_onclick(event)">
+                    <div class="d-flex justify-content-between">
+                            <button class="fs-24px px-3 py-3 fw-500 border border-0 bg-color-blue text-color-white" onclick=""
+                                id="">Log in</button>
+                        <div class="d-flex bg-color-login px-3" onclick="login_hide()">
+                            <button class="fs-4 border-0">✖️</button>
+                        </div>
+                    </div>
+                    <form action="" class="w-100 mx-auto py-5 px-5 bg-color-darkwhite">
+                        <div class="row justify-content-between">
+                            <div class="col-12 col-lg-5">
+                                <label for="" class="form-label  text-black fs-5 fw-400">Email</label>
+                                <input type="email" placeholder="enter your email" class="form-control py-3">
+                            </div>
+                            <div class="col-12 col-lg-5">
+                                <label for="" class="form-label  text-black fs-5 fw-400">Password</label>
+                                <input type="password" placeholder="enter your password" class="form-control py-3">
+                            </div>
+                        </div>
+                            <button class="my-5 bg-color-blue border border-0 rounded-500 px-4 py-2 fs-5 text-color-white w-100 text-center">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Sign in Form End  -->
+    
+        <!-- Sign UP FORMS -->
+    
+        <div class="w-100 vh-100 position-fixed box-shadow-login z-index-10" id="hideover-lay" onclick="signupclose()">    
+            <div class="container position-absolute top-50 start-50 translate-middle z-index-10" id="Child"
+                onclick="Login_Page_onclick(event)">
+                <div class="d-flex justify-content-between">
+                    <div class="d-flex justify-content-center">
+                        <button class="fs-24px px-3 py-3 fw-500 border border-0 " onclick="lawyersignup()"
+                            id="colorwl">Lawyer</button>
+                        <button class="fs-24px px-3 py-3 fw-500 border-0" onclick="usersignup()" id="colorbu">User</button>
+                    </div>
+                    <div class="d-flex bg-color-login px-3" onclick="signupclose()">
+                        <button class="fs-4 border-0">✖️</button>
+                    </div>
+                </div>
+                <div class="bg-color-login container py-5 z-index-5">
+    
+                    <!-- User Sign Up Form -->
+                    <form action="" class="" id="showu">
+    
+                        <div class="row justify-content-center justify-content-lg-around my-lg-5">
+                            <div class="col-10 col-lg-4">
+                                <input type="text" placeholder="Enter Full Name*"
+                                    class="form-control border border-top-0 border-end-0 border-start-0 border-bottom-3 rounded-0 fs-18px py-1 my-2 text-color-grey fw-400 border-secondary-subtle"
+                                    onchange="validate_User_Name()" id="User_Name" required>
+                                <div class="invalid_User_Name text-color-red">
+                                </div>
+                            </div>
+                            <div class="col-10 col-lg-4">
+                                <input type="email" name="" placeholder="Enter your Email*"
+                                    class="form-control border border-top-0 border-end-0 border-start-0 border-bottom-3 rounded-0 fs-18px py-1 my-2 text-color-grey fw-400 border-secondary-subtle "
+                                    onchange="validate_User_Email()" id="User_Email" required>
+                                <div class="invalid_User_Email text-color-red">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center justify-content-lg-around my-lg-5">
+                            <div class="col-10 col-lg-4">
+                                <input type="text" placeholder="Phone Number*"
+                                    class="form-control border border-top-0 border-end-0 border-start-0 border-bottom-3 rounded-0 fs-18px py-1 my-2 text-color-grey fw-400 border-secondary-subtle"
+                                    onchange="validate_User_Number()" id="User_Number" required>
+                                <div class="invalid_User_Number text-color-red">
+                                </div>
+                            </div>
+                            <div class="col-10 col-lg-4">
+                                <input type="text" placeholder="State"
+                                    class="form-control border border-top-0 border-end-0 border-start-0 border-bottom-3 rounded-0 fs-18px py-1 my-2 text-color-grey fw-400 border-secondary-subtle"
+                                    onchange="validate_User_State()" id="User_State" required>
+                                <div class="invalid_User_State text-color-red">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center justify-content-lg-around my-lg-5">
+                            <div class="col-10 col-lg-4">
+                                <input type="password" placeholder="Enter Password*"
+                                    class="form-control border border-top-0 border-end-0 border-start-0 border-bottom-3 rounded-0 fs-18px py-1 my-2 text-color-grey fw-400 border-secondary-subtle"
+                                    onchange="validate_User_Password()" id="User_Password" required>
+                                <div class="invalid_User_Password text-color-red">
+                                </div>
+                            </div>
+                            <div class="col-10 col-lg-4">
+                                <input type="password" placeholder="Confirm Password*"
+                                    class="form-control border border-top-0 border-end-0 border-start-0 border-bottom-3 rounded-0 fs-18px py-1 my-2 text-color-grey fw-400 border-secondary-subtle"
+                                    onchange="Confirm_User_Password()" id="User_CPassword" required>
+                                <div class="invalid_User_CPassword text-color-red">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-baseline mt-3 mt-lg-5 ">
+                            <button type="submit"
+                                class="bg-color-blue text-color-white px-2 py-2 mx-auto fs-16px fw-600 border border-0 rounded-500"
+                                onclick="Alert_Msg_User()" id="Register_ButtonU">Register
+                                Now</button>
+                        </div>
+    
+                    </form>
+                    <!-- Lawyer Sign up From  -->
+                    <form action="" class="" id="hiddenl">
+                        <div class="row justify-content-center justify-content-lg-around my-lg-5">
+                            <div class="col-10 col-lg-4">
+                                <input type="text" placeholder="Enter Full Name*"
+                                    class="form-control mb-3 border border-top-0 border-end-0 border-start-0 border-bottom-3 rounded-0 fs-18px py-1 my-1 text-color-grey fw-400 border-secondary-subtle User_Name"
+                                    onchange="validate_Lawyer_Name()" id="Lawyer_Name" required value>
+                                <div class="invalid_Lawyer_Name text-color-red">
+                                </div>
+                            </div>
+                            <div class="col-10 col-lg-4">
+                                <input type="email" name="" placeholder="Enter your Email*"
+                                    class="form-control mb-3 border border-top-0 border-end-0 border-start-0 border-bottom-3 rounded-0 fs-18px py-1 my-1 text-color-grey fw-400 border-secondary-subtle User_Email"
+                                    onchange="validate_Lawyer_Email()" id="Lawyer_Email" required value>
+                                <div class="invalid_Lawyer_Email text-color-red">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center justify-content-lg-around my-lg-5">
+                            <div class="col-10 col-lg-4">
+                                <input type="text" placeholder="Phone Number*"
+                                    class="form-control mb-3 border border-top-0 border-end-0 border-start-0 border-bottom-3 rounded-0 fs-18px py-1 my-1 text-color-grey fw-400 border-secondary-subtle"
+                                    onchange="validate_Lawyer_Number()" id="Lawyer_Number" required>
+                                <div class="invalid_Lawyer_Number text-color-red">
+                                </div>
+                            </div>
+                            <div class="col-10 col-lg-4">
+                                <input type="text" placeholder="Experience"
+                                    class="form-control mb-3 border border-top-0 border-end-0 border-start-0 border-bottom-3 rounded-0 fs-18px py-1 my-1 text-color-grey fw-400 border-secondary-subtle"
+                                    onchange="validate_Lawyer_Exper()" id="Lawyer_Exper" required>
+                                <div class="invalid_Lawyer_Exper text-color-red">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center justify-content-lg-around my-lg-5">
+                            <div class="col-10 col-lg-4">
+                                <input type="text" placeholder="Specialization"
+                                    class="form-control mb-3 border border-top-0 border-end-0 border-start-0 border-bottom-3 rounded-0 fs-18px py-1 my-1 text-color-grey fw-400 border-secondary-subtle" required>
+                            </div>
+                            <div class="col-10 col-lg-4">
+                                <input type="text" placeholder="Enter or Choose Location"
+                                    class="form-control mb-3 border border-top-0 border-end-0 border-start-0 border-bottom-3 rounded-0 fs-18px py-1 my-1 text-color-grey fw-400 border-secondary-subtle" required>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center justify-content-lg-around my-lg-5">
+                            <div class="col-10 col-lg-4">
+                                <input type="password" placeholder="Enter Password*"
+                                    class="form-control mb-3 border border-top-0 border-end-0 border-start-0 border-bottom-3 rounded-0 fs-18px py-1 my-1 text-color-grey fw-400 border-secondary-subtle"
+                                    onchange="validate_Lawyer_Password()" id="Lawyer_Password" required>
+                                <div class="invalid_Lawyer_Password text-color-red">
+                                </div>
+                            </div>
+                            <div class="col-10 col-lg-4">
+                                <input type="password" placeholder="Confirm Password*"
+                                    class="form-control mb-3 border border-top-0 border-end-0 border-start-0 border-bottom-3 rounded-0 fs-18px py-1 my-1 text-color-grey fw-400 border-secondary-subtle"
+                                    onchange="Confirm_Lawyer_Password()" id="Lawyer_CPassword" required>
+                                <div class="invalid_Lawyer_CPassword text-color-red">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-baseline mt-3 mt-lg-5 ">
+                            <button type="submit"
+                                class="bg-color-blue text-color-white px-2 py-2 mx-auto fs-16px fw-600 border border-0 rounded-500"
+                                onclick="Alert_Msg_Lawyer()" id="Register_ButtonL">Register
+                                Now</button>
+                        </div>
+    
+    
+                    </form>
+                </div>
+            </div>
+    
+        </div>
+        <!-- sign UP form End  -->
+    
     <!-- Navbar -->
-    <nav class="sticky-top navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="sticky-top navbar navbar-expand-lg navbar-light bg-light z-index-9">
         <div class="container-fluid mx-5 my-2">
             <a class="navbar-brand" href="#"><img src="Images/Vector.png" alt=""></a>
 
@@ -56,7 +237,7 @@
                 </ul>
                 <div class="dropdown">
                     <button
-                        class="d-block fw-bold fontcolor mb-3 mb-lg-0 d-lg-inline me-lg-5 fs-5 textcolor border border-0 bg-light" onclick="navbar_closed()">Login</button>
+                        class="d-block fw-bold fontcolor mb-3 mb-lg-0 d-lg-inline me-lg-5 fs-5 textcolor border border-0 bg-light" onclick="navbar_closed(); login()">Login</button>
                     <button class="bg-color-blue px-5 py-2 border rounded-3 text-color-white fw-normal px-4"
                         id="nameborder" type="button" id="" aria-expanded="false" onclick="navbar_closed(); signuphover()">
                         Sign Up
@@ -70,157 +251,6 @@
             </div>
         </div>
     </nav>
-
-    <!-- Sign UP FORMS -->
-
-    <div class="w-100 vh-100 position-fixed box-shadow-login" id="hideover-lay" onclick="signupclose()">    
-        <div class="container position-absolute top-40 start-50 translate-middle z-index-10" id="Child"
-            onclick="Login_Page_onclick(event)">
-            <div class="d-flex justify-content-between">
-                <div class="d-flex justify-content-center">
-                    <button class="fs-24px px-3 py-3 fw-500 border border-0 " onclick="lawyersignup()"
-                        id="colorwl">Lawyer</button>
-                    <button class="fs-24px px-3 py-3 fw-500 border-0" onclick="usersignup()" id="colorbu">User</button>
-                </div>
-                <div class="d-flex bg-color-login px-3" onclick="signupclose()">
-                    <button class="fs-4 border-0">✖️</button>
-                </div>
-            </div>
-            <div class="bg-color-login container py-5 z-index-12">
-
-                <!-- User Sign Up Form -->
-                <form action="" class="" id="showu">
-
-                    <div class="row justify-content-center justify-content-lg-around my-lg-5">
-                        <div class="col-10 col-lg-4">
-                            <input type="text" placeholder="Enter Full Name*"
-                                class="form-control border border-top-0 border-end-0 border-start-0 border-bottom-3 rounded-0 fs-18px py-1 my-2 text-color-grey fw-400 border-secondary-subtle"
-                                onchange="validate_User_Name()" id="User_Name" required>
-                            <div class="invalid_User_Name text-color-red">
-                            </div>
-                        </div>
-                        <div class="col-10 col-lg-4">
-                            <input type="email" name="" placeholder="Enter your Email*"
-                                class="form-control border border-top-0 border-end-0 border-start-0 border-bottom-3 rounded-0 fs-18px py-1 my-2 text-color-grey fw-400 border-secondary-subtle "
-                                onchange="validate_User_Email()" id="User_Email" required>
-                            <div class="invalid_User_Email text-color-red">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row justify-content-center justify-content-lg-around my-lg-5">
-                        <div class="col-10 col-lg-4">
-                            <input type="text" placeholder="Phone Number*"
-                                class="form-control border border-top-0 border-end-0 border-start-0 border-bottom-3 rounded-0 fs-18px py-1 my-2 text-color-grey fw-400 border-secondary-subtle"
-                                onchange="validate_User_Number()" id="User_Number" required>
-                            <div class="invalid_User_Number text-color-red">
-                            </div>
-                        </div>
-                        <div class="col-10 col-lg-4">
-                            <input type="text" placeholder="State"
-                                class="form-control border border-top-0 border-end-0 border-start-0 border-bottom-3 rounded-0 fs-18px py-1 my-2 text-color-grey fw-400 border-secondary-subtle"
-                                onchange="validate_User_State()" id="User_State" required>
-                            <div class="invalid_User_State text-color-red">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row justify-content-center justify-content-lg-around my-lg-5">
-                        <div class="col-10 col-lg-4">
-                            <input type="password" placeholder="Enter Password*"
-                                class="form-control border border-top-0 border-end-0 border-start-0 border-bottom-3 rounded-0 fs-18px py-1 my-2 text-color-grey fw-400 border-secondary-subtle"
-                                onchange="validate_User_Password()" id="User_Password" required>
-                            <div class="invalid_User_Password text-color-red">
-                            </div>
-                        </div>
-                        <div class="col-10 col-lg-4">
-                            <input type="password" placeholder="Confirm Password*"
-                                class="form-control border border-top-0 border-end-0 border-start-0 border-bottom-3 rounded-0 fs-18px py-1 my-2 text-color-grey fw-400 border-secondary-subtle"
-                                onchange="Confirm_User_Password()" id="User_CPassword" required>
-                            <div class="invalid_User_CPassword text-color-red">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="d-flex justify-content-center align-items-baseline mt-3 mt-lg-5 ">
-                        <button type="submit"
-                            class="bg-color-blue text-color-white px-2 py-2 mx-auto fs-16px fw-600 border border-0 rounded-500"
-                            onclick="Alert_Msg_User()" id="Register_ButtonU">Register
-                            Now</button>
-                    </div>
-
-                </form>
-                <!-- Lawyer Sign up From  -->
-                <form action="" class="" id="hiddenl">
-                    <div class="row justify-content-center justify-content-lg-around my-lg-5">
-                        <div class="col-10 col-lg-4">
-                            <input type="text" placeholder="Enter Full Name*"
-                                class="form-control mb-3 border border-top-0 border-end-0 border-start-0 border-bottom-3 rounded-0 fs-18px py-1 my-1 text-color-grey fw-400 border-secondary-subtle User_Name"
-                                onchange="validate_Lawyer_Name()" id="Lawyer_Name" required value>
-                            <div class="invalid_Lawyer_Name text-color-red">
-                            </div>
-                        </div>
-                        <div class="col-10 col-lg-4">
-                            <input type="email" name="" placeholder="Enter your Email*"
-                                class="form-control mb-3 border border-top-0 border-end-0 border-start-0 border-bottom-3 rounded-0 fs-18px py-1 my-1 text-color-grey fw-400 border-secondary-subtle User_Email"
-                                onchange="validate_Lawyer_Email()" id="Lawyer_Email" required value>
-                            <div class="invalid_Lawyer_Email text-color-red">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row justify-content-center justify-content-lg-around my-lg-5">
-                        <div class="col-10 col-lg-4">
-                            <input type="text" placeholder="Phone Number*"
-                                class="form-control mb-3 border border-top-0 border-end-0 border-start-0 border-bottom-3 rounded-0 fs-18px py-1 my-1 text-color-grey fw-400 border-secondary-subtle"
-                                onchange="validate_Lawyer_Number()" id="Lawyer_Number" required>
-                            <div class="invalid_Lawyer_Number text-color-red">
-                            </div>
-                        </div>
-                        <div class="col-10 col-lg-4">
-                            <input type="text" placeholder="Experience"
-                                class="form-control mb-3 border border-top-0 border-end-0 border-start-0 border-bottom-3 rounded-0 fs-18px py-1 my-1 text-color-grey fw-400 border-secondary-subtle"
-                                onchange="validate_Lawyer_Exper()" id="Lawyer_Exper" required>
-                            <div class="invalid_Lawyer_Exper text-color-red">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row justify-content-center justify-content-lg-around my-lg-5">
-                        <div class="col-10 col-lg-4">
-                            <input type="text" placeholder="Specialization"
-                                class="form-control mb-3 border border-top-0 border-end-0 border-start-0 border-bottom-3 rounded-0 fs-18px py-1 my-1 text-color-grey fw-400 border-secondary-subtle" required>
-                        </div>
-                        <div class="col-10 col-lg-4">
-                            <input type="text" placeholder="Enter or Choose Location"
-                                class="form-control mb-3 border border-top-0 border-end-0 border-start-0 border-bottom-3 rounded-0 fs-18px py-1 my-1 text-color-grey fw-400 border-secondary-subtle" required>
-                        </div>
-                    </div>
-                    <div class="row justify-content-center justify-content-lg-around my-lg-5">
-                        <div class="col-10 col-lg-4">
-                            <input type="password" placeholder="Enter Password*"
-                                class="form-control mb-3 border border-top-0 border-end-0 border-start-0 border-bottom-3 rounded-0 fs-18px py-1 my-1 text-color-grey fw-400 border-secondary-subtle"
-                                onchange="validate_Lawyer_Password()" id="Lawyer_Password" required>
-                            <div class="invalid_Lawyer_Password text-color-red">
-                            </div>
-                        </div>
-                        <div class="col-10 col-lg-4">
-                            <input type="password" placeholder="Confirm Password*"
-                                class="form-control mb-3 border border-top-0 border-end-0 border-start-0 border-bottom-3 rounded-0 fs-18px py-1 my-1 text-color-grey fw-400 border-secondary-subtle"
-                                onchange="Confirm_Lawyer_Password()" id="Lawyer_CPassword" required>
-                            <div class="invalid_Lawyer_CPassword text-color-red">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="d-flex justify-content-center align-items-baseline mt-3 mt-lg-5 ">
-                        <button type="submit"
-                            class="bg-color-blue text-color-white px-2 py-2 mx-auto fs-16px fw-600 border border-0 rounded-500"
-                            onclick="Alert_Msg_Lawyer()" id="Register_ButtonL">Register
-                            Now</button>
-                    </div>
-
-
-                </form>
-            </div>
-        </div>
-
-    </div>
-    <!-- sign UP form End  -->
 
     <!-- About us Header -->
 
@@ -409,7 +439,7 @@
                             placeholder="Enter Your Email" aria-label="Recipient's username"
                             aria-describedby="basic-addon2">
                         <span
-                            class="input-group-text bg-color-lightblue text-color-white Subscribe-Border z-index-12 margin-over-footer fw-600 Subscribe-Left-Round px-lg-1"
+                            class="input-group-text bg-color-lightblue text-color-white Subscribe-Border z-index-5 margin-over-footer fw-600 Subscribe-Left-Round px-lg-1"
                             id="">Subscribe</span>
                     </div>
                 </div>

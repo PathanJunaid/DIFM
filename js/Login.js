@@ -1,3 +1,5 @@
+
+// Sign Up Form Js 
 function signuphover() {
     let id = document.querySelector('#hideover-lay').id = "showover-lay";
     console.log("Done")
@@ -13,10 +15,10 @@ function Login_Page_onclick(event) {
     event.cancelBubble = true; if (event.stopPropagation) event.stopPropagation();
 }
 function lawyersignup() {
-    document.querySelector('#hiddenl').id = "showl";
-    document.querySelector('#showu').id = "hiddenu";
-    document.querySelector('#colorwl').id = "colorbl";
-    document.querySelector('#colorbu').id = "colorwu";
+    document.querySelector('#hiddenl').setAttribute('id' , "showl");
+    document.querySelector('#showu').setAttribute('id' , "hiddenu");
+    document.querySelector('#colorwl').setAttribute('id' , "colorbl");
+    document.querySelector('#colorbu').setAttribute('id' , "colorwu");
 }
 function usersignup() {
     document.querySelector('#hiddenu').id = "showu";
@@ -284,4 +286,17 @@ async function navbar_closed(){
     });
     let val= await p;
     console.log(val);
+}
+
+// Sign up form js End 
+
+// Login Form js 
+
+function login(){
+    let show = document.querySelector('#login_hide').setAttribute('id','login_show');
+    console.log(show)
+}
+function login_hide(){
+    let show = document.querySelector('#login_show').setAttribute('id','login_hide');
+    console.log(show)
 }
