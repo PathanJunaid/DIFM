@@ -183,7 +183,8 @@ body{
     box-shadow: 1px 1px 10px;
 }
 .nheight{
-    height: 15vh;
+    min-height: 15vh;
+    max-height: 20vh;
 }
 #image-mid{
     max-width: 30%;

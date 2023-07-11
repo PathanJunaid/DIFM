@@ -23,43 +23,38 @@
     <!-- Navbar -->
     <nav class="sticky-top navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid mx-5 my-2">
-            <!-- <a class="navbar-brand" href="#"><img src="Images/Vector.png" alt=""></a> -->
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
+            <a class="navbar-brand" href="#"><img src="Images/Vector.png" alt=""></a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon fs-3"></span>
-            </button>
+              </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active fs-4 fw-bold me-md-5 textcolor" aria-current="page" href="#">DIFM
-                            LAW</a>
+                    <li class="m-0">
+                        <a class="nav-link active fs-4 fw-bold me-md-5 textcolor" aria-current="page" href="#">DIFM LAW</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link fs-5 textcolor fw-bold active me-md-5" href="index.html"
-                            aria-current="page">Home</a>
+                    <li class="m-0">
+                        <a class="nav-link fs-5 fw-bold active me-md-5 textcolor" href="index.html" aria-current="page">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link fs-5 textcolor fw-bold active me-md-5" href="#" aria-expanded="false">
-                            Find Jobs
+                    <li class="m-0 dropdown">
+                        <a class="nav-link fs-5 fw-bold active me-md-5 textcolor" href="About_Us.html" aria-expanded="false">
+                            About Us
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link fs-5 textcolor fw-bold active me-md-5" href="#" tabindex="-1"
-                            aria-disabled="true">Post Jobs</a>
+                    <li class="m-0">
+                        <a class="nav-link fs-5 fw-bold active me-md-5 textcolor" href="Contact-Us.html" tabindex="-1"
+                            aria-disabled="true">Contact Us</a>
                     </li>
                 </ul>
                 <div class="dropdown">
-                    <button
-                        class="d-block fw-bold fontcolor mb-3 mb-lg-0 d-lg-inline me-lg-5 fs-5 textcolor border border-0 bg-light">Login</button>
-                    <button class="bg-color-blue px-5 py-2 border rounded-3 text-color-white fw-normal px-4"
-                        id="nameborder" type="button" id="" aria-expanded="false" onclick="signuphover()">
-                        Sign Up
+                    <img src="Images/Ellipse 106.png" class="rounded-circle  imgborder" alt="...">
+                    <button class="btn btn-secondary dropdown-toggle margin-over fw-bold px-4" id="nameborder" type="button"
+                        id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        Junaid Khan
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                         <li><a class="dropdown-item" href="#">Profile</a></li>
-                        <li><a class="dropdown-item" href="#">Help</a></li>
+                        <li><a class="dropdown-item" href="Dashboard.php">Dashboard</a></li>
                         <li><a class="dropdown-item" href="#">Log Out</a></li>
                     </ul>
                 </div>
@@ -95,7 +90,7 @@
                                                 <label class='fw-500'>User Name : </label>
                                             </div>
                                             <div class='col-6'>
-                                                <input type='text' value='$User' class='border border-0 bg-color-white ps-5 w-75' name='User'>
+                                                <input type='text' value='$User' class='border border-0 bg-color-white ps-5 w-75' name='User' readonly>
                                             </div>
                                         </div>
                                         <div class='row'>
@@ -103,7 +98,7 @@
                                                 <label class='fw-500'>Availabilty : </label>
                                             </div>
                                             <div class='col-6'>
-                                                <input type='text' value='$Avail' class='border border-0 bg-color-white ps-5 w-75' name='Avai'>
+                                                <input type='text' value='$Avail' class='border border-0 bg-color-white ps-5 w-75' name='Avai' readonly>
                                             </div>
                                         </div>
                                         <div class='row'>
@@ -111,8 +106,7 @@
                                                 <label class='fw-500'>Date : </label>
                                             </div>
                                             <div class='col-6'>
-                                                <input type='text' value='$Date' class='border border-0 bg-color-white ps-5 w-75' name='Date'
-                                                    disabled>
+                                                <input type='text' value='$Date' class='border border-0 bg-color-white ps-5 w-75' name='Date' readonly>
                                             </div>
                                         </div>
                                         <div class='row'>
@@ -120,7 +114,7 @@
                                                 <label class='fw-500'>Expertise In : </label>
                                             </div>
                                             <div class='col-6'>
-                                                <input type='text' value='$Expert' class='border border-0 bg-color-white ps-5 w-75'
+                                                <input type='text' value='$Expert' class='border border-0 bg-color-white ps-5 w-75' readonly
                                                     name='Exper'>
                                             </div>
                                         </div>
@@ -162,7 +156,7 @@
         
             <form method='' action='' class='mt-5 mb-2' id='Searching'>
                 <input type='Search' placeholder='Search using Filter' class='Search form-control d-inline w-50 my-2 border-2 py-2' name='Search' id='Search' onkeyup='SearchF(value)' required>
-                <select class="mx-3 px-4 py-2 border-3 border-dark rounded-3 fw-500 bg-dark text-white" id='Selected' >
+                <select class="mx-3 px-4 py-2 border-3 rounded-3 fw-500 bg-color-thead text-black" id='Selected' >
                     <option value="User Name">Name</option>
                     <option value="Lawyer Time">Lawyer Time</option>
                     <option value="Request Date">Date</option>
@@ -194,6 +188,81 @@
         </div>
 
         <!-- </div> -->
+        <!-- Footer -->
+    <div class="container-fluid mt-5 px-0 bg-color-darkwhite">
+        <div class="d-lg-flex justify-content-lg-between align-items-lg-center flex-nowrap py-5">
+            <div class="my-4 mx-3 px-4">
+                <h2 class="py-3">DIFM LAW</h2>
+                <div>
+                    <p class="text-break text-justify pb-3">
+                        We are a leading lawyer listing portal, dedicated to simplifying the process of connecting
+                        lawyers and clients.
+                    </p>
+                </div>
+                <div class="d-flex justify-content-between w-50">
+                    <img src="Images/image 32.png" alt="" class="img-fluid">
+                    <img src="Images/image 31.png" alt="" class="img-fluid">
+                    <img src="Images/image 33.png" alt="" class="img-fluid">
+                    <img src="Images/image 34.png" alt="" class="img-fluid">
+                </div>
+            </div>
+
+            <!-- Display for large and Xl Display -->
+
+            <div class="my-4 mx-3 d-none d-lg-block ">
+                <ul class="list-unstyled">
+                    <li class="fs-2em fw-600 my-2">Quick Links</li>
+                    <li class="fs-1em fw-400 my-2"><a href="Contact-Us.html" class="text-decoration-none textcolor">Contact</a></li>
+                    <li class="fs-1em fw-400 my-2"><a href="About_Us.html" class="text-decoration-none textcolor">About</a></li>
+                    <li class="fs-1em fw-400 my-2">Lawyers</li>
+                </ul>
+            </div>
+    
+            <!-- Display for large and Xl Display -->
+    
+            <div class="my-4 mx-3 d-none d-lg-block px-4">
+                <ul class="list-unstyled">
+                    <li class="fs-2em fw-600 my-2">DIFM Group</li>
+                    <li class="fs-1em fw-400 my-2"><a href="https://difm.llc/" class="text-decoration-none textcolor">Difm.llc</a></li>
+                    <li class="fs-1em fw-400 my-2"><a href="https://www.worldmodelhunt.com/" class="text-decoration-none textcolor">Worldmodelhunt.com</a></li>
+                    <li class="fs-1em fw-400 my-2"><a href="https://bragsocial.com/" class="text-decoration-none textcolor">BragSocial.com</a></li>
+                </ul>
+            </div>
+    
+            <!-- Display for medium and small Display -->
+    
+            <div class="d-flex mx-3 justify-content-between d-lg-none d-xl-none d-xxl-none">
+                <div class="my-4 mx-3">
+                    <ul class="list-unstyled">
+                        <li class="fs-2em fw-600">Quick Links</li>
+                        <li class="fs-1em fw-400"><a href="Contact-Us.html" class="text-decoration-none textcolor">Contact</a></li>
+                        <li class="fs-1em fw-400"><a href="About_Us.html" class="text-decoration-none textcolor">About</a></li>
+                        <li class="fs-1em fw-400">Lawyers</li>
+                    </ul>
+                </div>
+                <div class="my-4 mx-3">
+                    <ul class="list-unstyled">
+                        <li class="fs-2em fw-600">DIFM Group</li>
+                        <li class="fs-1em fw-400"><a href="https://difm.llc/" class="text-decoration-none textcolor">Difm.llc</a></li>
+                        <li class="fs-1em fw-400"><a href="https://www.worldmodelhunt.com/" class="text-decoration-none textcolor">Worldmodelhunt.com</a></li>
+                        <li class="fs-1em fw-400"><a href="https://bragsocial.com/" class="text-decoration-none textcolor">BragSocial.com</a></li>
+                    </ul>
+                </div>
+    
+            </div>
+
+            <div class="my-4 mx-3 px-4">
+                <div class="input-group">
+                    <input type="email" class="form-control Subscribe-Border rounded-500"
+                        placeholder="Enter Your Email" aria-label="Recipient's username"
+                        aria-describedby="basic-addon2">
+                    <span
+                        class="input-group-text bg-color-lightblue text-color-white Subscribe-Border z-index-12 margin-over-footer fw-600 Subscribe-Left-Round px-lg-1"
+                        id="">Subscribe</span>
+                </div>
+            </div>
+        </div>
+    </div>
 
         <!-- Bootstrap JS file  -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
