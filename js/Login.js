@@ -302,13 +302,29 @@ function login_hide(){
     console.log(show)
     document.body.style.overflow="scroll"
 }
-function Subscribed(val){
-    let btn = document.getElementById('Subscribe');
-    btn.classList.remove('d-none');
-    setTimeout(change,5000);
-    function change(){
-        btn.classList.add('d-none');
-    }
-}
+
 
 // Login form js end 
+// Footer Subscribed button 
+function Subscribed(key){
+    var regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    let p_tag = document.getElementById('Subscribe');
+    let val = document.getElementById('Subscribe_input').value;
+    var result = regex.test(val);
+    if(result){
+        p_tag.innerHTML="Subscribed";
+        p_tag.classList.add('text-success');
+        p_tag.classList.remove('text-danger');
+    }
+    else{
+        p_tag.innerHTML="invalid Email id";
+        p_tag.classList.add('text-danger');
+        p_tag.classList.remove('text-success');
+    }
+    p_tag.classList.remove('d-none');
+    setTimeout(change,5000);
+    function change(){
+        p_tag.classList.add('d-none');
+    }
+}
+// Footer Subscribed button js End 

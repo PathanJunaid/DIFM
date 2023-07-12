@@ -10,7 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- External CSS  -->
-    <link rel="stylesheet" href="CSS/Contact-UsCSS.css">
+    <!-- <link rel="stylesheet" href="CSS/Contact-UsCSS.css"> -->
     <link rel="stylesheet" href="CSS/Comman-Color-Border.css">
 
     <!-- Font Roboto -->
@@ -18,40 +18,229 @@
 </head>
 
 <body class="font-roboto selector-for-some-widget">
-    <!-- navbar -->
+    <!-- Sign in Form -->
+    <div class="position-fixed w-100 vh-100 box-shadow-login bg-blur" id="login_hide" onclick="login_hide()">
+        <div class="position-absolute top-50 start-50 translate-middle z-index-10 container">
+            <div class="w-100 mx-auto" onclick="Login_Page_onclick(event)">
+                <div class="d-flex justify-content-between">
+                    <button class="fs-24px px-3 py-3 fw-500 border border-0 bg-color-blue text-color-white" onclick=""
+                        id="">Log in</button>
+                    <div class="d-flex bg-color-login px-3" onclick="login_hide()">
+                        <button class="fs-4 border-0">✖️</button>
+                    </div>
+                </div>
+                <form action="" class="w-100 mx-auto py-5 px-5 bg-color-darkwhite">
+                    <div class="row justify-content-between">
+                        <div class="col-12 col-lg-5">
+                            <label for="" class="form-label  text-black fs-5 fw-400">Email</label>
+                            <input type="email" placeholder="enter your email" class="form-control py-3">
+                        </div>
+                        <div class="col-12 col-lg-5">
+                            <label for="" class="form-label  text-black fs-5 fw-400">Password</label>
+                            <input type="password" placeholder="enter your password" class="form-control py-3">
+                        </div>
+                    </div>
+                    <button
+                        class="my-5 bg-color-blue border border-0 rounded-500 px-4 py-2 fs-5 text-color-white w-100 text-center">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
 
-    <nav class="sticky-top navbar navbar-expand-lg navbar-light bg-light">
+    <!-- Sign in Form End  -->
+
+    <!-- Sign UP FORMS -->
+
+    <div class="w-100 vh-100 position-fixed box-shadow-login z-index-10" id="hideover-lay" onclick="signupclose()">
+        <div class="container position-absolute top-50 start-50 translate-middle z-index-10" id="Child"
+            onclick="Login_Page_onclick(event)">
+            <div class="d-flex justify-content-between">
+                <div class="d-flex justify-content-center">
+                    <button class="fs-24px px-3 py-3 fw-500 border border-0 " onclick="lawyersignup()"
+                        id="colorwl">Lawyer</button>
+                    <button class="fs-24px px-3 py-3 fw-500 border-0" onclick="usersignup()" id="colorbu">User</button>
+                </div>
+                <div class="d-flex bg-color-login px-3" onclick="signupclose()">
+                    <button class="fs-4 border-0">✖️</button>
+                </div>
+            </div>
+            <div class="bg-color-login container py-5 z-index-5">
+
+                <!-- User Sign Up Form -->
+                <form action="" class="" id="showu">
+
+                    <div class="row justify-content-center justify-content-lg-around my-lg-5">
+                        <div class="col-10 col-lg-4">
+                            <input type="text" placeholder="Enter Full Name*"
+                                class="form-control border border-top-0 border-end-0 border-start-0 border-bottom-3 rounded-0 fs-18px py-1 my-2 text-color-grey fw-400 border-secondary-subtle"
+                                onchange="validate_User_Name()" id="User_Name" required>
+                            <div class="invalid_User_Name text-color-red">
+                            </div>
+                        </div>
+                        <div class="col-10 col-lg-4">
+                            <input type="email" name="" placeholder="Enter your Email*"
+                                class="form-control border border-top-0 border-end-0 border-start-0 border-bottom-3 rounded-0 fs-18px py-1 my-2 text-color-grey fw-400 border-secondary-subtle "
+                                onchange="validate_User_Email()" id="User_Email" required>
+                            <div class="invalid_User_Email text-color-red">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center justify-content-lg-around my-lg-5">
+                        <div class="col-10 col-lg-4">
+                            <input type="text" placeholder="Phone Number*"
+                                class="form-control border border-top-0 border-end-0 border-start-0 border-bottom-3 rounded-0 fs-18px py-1 my-2 text-color-grey fw-400 border-secondary-subtle"
+                                onchange="validate_User_Number()" id="User_Number" required>
+                            <div class="invalid_User_Number text-color-red">
+                            </div>
+                        </div>
+                        <div class="col-10 col-lg-4">
+                            <input type="text" placeholder="State"
+                                class="form-control border border-top-0 border-end-0 border-start-0 border-bottom-3 rounded-0 fs-18px py-1 my-2 text-color-grey fw-400 border-secondary-subtle"
+                                onchange="validate_User_State()" id="User_State" required>
+                            <div class="invalid_User_State text-color-red">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center justify-content-lg-around my-lg-5">
+                        <div class="col-10 col-lg-4">
+                            <input type="password" placeholder="Enter Password*"
+                                class="form-control border border-top-0 border-end-0 border-start-0 border-bottom-3 rounded-0 fs-18px py-1 my-2 text-color-grey fw-400 border-secondary-subtle"
+                                onchange="validate_User_Password()" id="User_Password" required>
+                            <div class="invalid_User_Password text-color-red">
+                            </div>
+                        </div>
+                        <div class="col-10 col-lg-4">
+                            <input type="password" placeholder="Confirm Password*"
+                                class="form-control border border-top-0 border-end-0 border-start-0 border-bottom-3 rounded-0 fs-18px py-1 my-2 text-color-grey fw-400 border-secondary-subtle"
+                                onchange="Confirm_User_Password()" id="User_CPassword" required>
+                            <div class="invalid_User_CPassword text-color-red">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center align-items-baseline mt-3 mt-lg-5 ">
+                        <button type="submit"
+                            class="bg-color-blue text-color-white px-2 py-2 mx-auto fs-16px fw-600 border border-0 rounded-500"
+                            onclick="Alert_Msg_User()" id="Register_ButtonU">Register
+                            Now</button>
+                    </div>
+
+                </form>
+                <!-- Lawyer Sign up From  -->
+                <form action="" class="" id="hiddenl">
+                    <div class="row justify-content-center justify-content-lg-around my-lg-5">
+                        <div class="col-10 col-lg-4">
+                            <input type="text" placeholder="Enter Full Name*"
+                                class="form-control mb-3 border border-top-0 border-end-0 border-start-0 border-bottom-3 rounded-0 fs-18px py-1 my-1 text-color-grey fw-400 border-secondary-subtle User_Name"
+                                onchange="validate_Lawyer_Name()" id="Lawyer_Name" required value>
+                            <div class="invalid_Lawyer_Name text-color-red">
+                            </div>
+                        </div>
+                        <div class="col-10 col-lg-4">
+                            <input type="email" name="" placeholder="Enter your Email*"
+                                class="form-control mb-3 border border-top-0 border-end-0 border-start-0 border-bottom-3 rounded-0 fs-18px py-1 my-1 text-color-grey fw-400 border-secondary-subtle User_Email"
+                                onchange="validate_Lawyer_Email()" id="Lawyer_Email" required value>
+                            <div class="invalid_Lawyer_Email text-color-red">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center justify-content-lg-around my-lg-5">
+                        <div class="col-10 col-lg-4">
+                            <input type="text" placeholder="Phone Number*"
+                                class="form-control mb-3 border border-top-0 border-end-0 border-start-0 border-bottom-3 rounded-0 fs-18px py-1 my-1 text-color-grey fw-400 border-secondary-subtle"
+                                onchange="validate_Lawyer_Number()" id="Lawyer_Number" required>
+                            <div class="invalid_Lawyer_Number text-color-red">
+                            </div>
+                        </div>
+                        <div class="col-10 col-lg-4">
+                            <input type="text" placeholder="Experience"
+                                class="form-control mb-3 border border-top-0 border-end-0 border-start-0 border-bottom-3 rounded-0 fs-18px py-1 my-1 text-color-grey fw-400 border-secondary-subtle"
+                                onchange="validate_Lawyer_Exper()" id="Lawyer_Exper" required>
+                            <div class="invalid_Lawyer_Exper text-color-red">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center justify-content-lg-around my-lg-5">
+                        <div class="col-10 col-lg-4">
+                            <input type="text" placeholder="Specialization"
+                                class="form-control mb-3 border border-top-0 border-end-0 border-start-0 border-bottom-3 rounded-0 fs-18px py-1 my-1 text-color-grey fw-400 border-secondary-subtle"
+                                required>
+                        </div>
+                        <div class="col-10 col-lg-4">
+                            <input type="text" placeholder="Enter or Choose Location"
+                                class="form-control mb-3 border border-top-0 border-end-0 border-start-0 border-bottom-3 rounded-0 fs-18px py-1 my-1 text-color-grey fw-400 border-secondary-subtle"
+                                required>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center justify-content-lg-around my-lg-5">
+                        <div class="col-10 col-lg-4">
+                            <input type="password" placeholder="Enter Password*"
+                                class="form-control mb-3 border border-top-0 border-end-0 border-start-0 border-bottom-3 rounded-0 fs-18px py-1 my-1 text-color-grey fw-400 border-secondary-subtle"
+                                onchange="validate_Lawyer_Password()" id="Lawyer_Password" required>
+                            <div class="invalid_Lawyer_Password text-color-red">
+                            </div>
+                        </div>
+                        <div class="col-10 col-lg-4">
+                            <input type="password" placeholder="Confirm Password*"
+                                class="form-control mb-3 border border-top-0 border-end-0 border-start-0 border-bottom-3 rounded-0 fs-18px py-1 my-1 text-color-grey fw-400 border-secondary-subtle"
+                                onchange="Confirm_Lawyer_Password()" id="Lawyer_CPassword" required>
+                            <div class="invalid_Lawyer_CPassword text-color-red">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center align-items-baseline mt-3 mt-lg-5 ">
+                        <button type="submit"
+                            class="bg-color-blue text-color-white px-2 py-2 mx-auto fs-16px fw-600 border border-0 rounded-500"
+                            onclick="Alert_Msg_Lawyer()" id="Register_ButtonL">Register
+                            Now</button>
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <!-- sign UP form End  -->
+
+    <!-- Navbar -->
+    <nav class="sticky-top navbar navbar-expand-lg navbar-light bg-light z-index-9">
         <div class="container-fluid mx-5 my-2">
             <a class="navbar-brand" href="#"><img src="Images/Vector.png" alt=""></a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            <button class="navbar-toggler button-1" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon fs-3"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse its" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active fs-4 fw-bold me-md-5 textcolor" aria-current="page" href="#">DIFM
+                        <a class="nav-link active fs-4 fw-bold me-md-5 textcolor" aria-current="page" href="#"
+                            onclick="navbar_closed()">DIFM
                             LAW</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fs-5 textcolor fw-bold active me-md-5" href="index.html" aria-current="page">Home</a>
+                        <a class="nav-link fs-5 textcolor fw-bold active me-md-5" href="index.html" aria-current="page"
+                            onclick="navbar_closed()">Home</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link fs-5 textcolor fw-bold active me-md-5" href="#" aria-expanded="false">
+                    <li class="nav-item">
+                        <a class="nav-link fs-5 textcolor fw-bold active me-md-5" href="#" aria-expanded="false"
+                            onclick="navbar_closed()">
                             Find Jobs
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link fs-5 textcolor fw-bold active me-md-5" href="#" tabindex="-1"
-                            aria-disabled="true">Post Jobs</a>
+                            aria-disabled="true" onclick="navbar_closed()">Post Jobs</a>
                     </li>
                 </ul>
                 <div class="dropdown">
-                    <span class="d-block fw-bold fontcolor mb-3 mb-lg-0 d-lg-inline me-lg-5 fs-5 textcolor">Login</span>
+                    <button
+                        class="d-block fw-bold fontcolor mb-3 mb-lg-0 d-lg-inline me-lg-5 fs-5 textcolor border border-0 bg-light"
+                        onclick="navbar_closed(); login()">Login</button>
                     <button class="bg-color-blue px-5 py-2 border rounded-3 text-color-white fw-normal px-4"
-                        id="nameborder" type="button" id="" aria-expanded="false">
+                        id="nameborder" type="button" id="" aria-expanded="false"
+                        onclick="navbar_closed(); signuphover()">
                         Sign Up
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
@@ -63,7 +252,6 @@
             </div>
         </div>
     </nav>
-
     <!-- Get In Touch Row Containing form-->
     <div class="container-fluid my-5">
         <div class="row justify-content-around">
@@ -95,23 +283,23 @@
                 <form action="#" class="py-4 container-fluid">
                     <div class="row row-cols-2 justify-content-around">
                         <div class="col-12 col-md-5 col-sm-11">
-                            <label for="exampleInputEmail1" class="form-label fs-5">Name</label>
-                            <input type="text" class="form-control fs-5" id="exampleInputEmail1"
+                            <label for="" class="form-label fs-5">Name</label>
+                            <input type="text" class="form-control fs-5"
                                 aria-describedby="emailHelp" placeholder="Enter your Name">
                         </div>
                         <div class="col-12 col-md-5 col-sm-11">
-                            <label for="exampleInputEmail1" class="form-label fs-5">Email</label>
-                            <input type="email" class="form-control fs-5" id="exampleInputEmail1"
+                            <label for="" class="form-label fs-5">Email</label>
+                            <input type="email" class="form-control fs-5"
                                 aria-describedby="emailHelp" placeholder="Enter you Emali">
                         </div>
                         <div class="col-12 col-md-5 col-sm-11">
-                            <label for="exampleInputEmail1" class="form-label fs-5">Phone</label>
-                            <input type="number" class="form-control fs-5" id="exampleInputEmail1"
+                            <label for="" class="form-label fs-5">Phone</label>
+                            <input type="number" class="form-control fs-5"
                                 aria-describedby="emailHelp" placeholder="Enter Phone Number">
                         </div>
                         <div class="col-12 col-md-5 col-sm-11">
-                            <label for="exampleInputEmail1" class="form-label fs-5">Subject</label>
-                            <select name="" class="form-control fs-5" id="" placeholder="Choose Subject">
+                            <label for="" class="form-label fs-5">Subject</label>
+                            <select name="" class="form-control fs-5" placeholder="Choose Subject">
                                 <option value="">Choose Subject</option>
                                 <option value=""></option>
                                 <option value=""></option>
@@ -208,58 +396,70 @@
             <div class="my-4 mx-3 d-none d-lg-block ">
                 <ul class="list-unstyled">
                     <li class="fs-2em fw-600 my-2">Quick Links</li>
-                    <li class="fs-1em fw-400 my-2"><a href="Contact-Us.html" class="text-decoration-none textcolor">Contact</a></li>
-                    <li class="fs-1em fw-400 my-2"><a href="About_Us.html" class="text-decoration-none textcolor">About</a></li>
+                    <li class="fs-1em fw-400 my-2"><a href="Contact-Us.html"
+                            class="text-decoration-none textcolor">Contact</a></li>
+                    <li class="fs-1em fw-400 my-2"><a href="About_Us.html"
+                            class="text-decoration-none textcolor">About</a></li>
                     <li class="fs-1em fw-400 my-2">Lawyers</li>
                 </ul>
             </div>
-    
+
             <!-- Display for large and Xl Display -->
-    
+
             <div class="my-4 mx-3 d-none d-lg-block px-4">
                 <ul class="list-unstyled">
                     <li class="fs-2em fw-600 my-2">DIFM Group</li>
-                    <li class="fs-1em fw-400 my-2"><a href="https://difm.llc/" class="text-decoration-none textcolor">Difm.llc</a></li>
-                    <li class="fs-1em fw-400 my-2"><a href="https://www.worldmodelhunt.com/" class="text-decoration-none textcolor">Worldmodelhunt.com</a></li>
-                    <li class="fs-1em fw-400 my-2"><a href="https://bragsocial.com/" class="text-decoration-none textcolor">BragSocial.com</a></li>
+                    <li class="fs-1em fw-400 my-2"><a href="https://difm.llc/"
+                            class="text-decoration-none textcolor">Difm.llc</a></li>
+                    <li class="fs-1em fw-400 my-2"><a href="https://www.worldmodelhunt.com/"
+                            class="text-decoration-none textcolor">Worldmodelhunt.com</a></li>
+                    <li class="fs-1em fw-400 my-2"><a href="https://bragsocial.com/"
+                            class="text-decoration-none textcolor">BragSocial.com</a></li>
                 </ul>
             </div>
-    
+
             <!-- Display for medium and small Display -->
-    
+
             <div class="d-flex mx-3 justify-content-between d-lg-none d-xl-none d-xxl-none">
                 <div class="my-4 mx-3">
                     <ul class="list-unstyled">
                         <li class="fs-2em fw-600">Quick Links</li>
-                        <li class="fs-1em fw-400"><a href="Contact-Us.html" class="text-decoration-none textcolor">Contact</a></li>
-                        <li class="fs-1em fw-400"><a href="About_Us.html" class="text-decoration-none textcolor">About</a></li>
+                        <li class="fs-1em fw-400"><a href="Contact-Us.html"
+                                class="text-decoration-none textcolor">Contact</a></li>
+                        <li class="fs-1em fw-400"><a href="About_Us.html"
+                                class="text-decoration-none textcolor">About</a></li>
                         <li class="fs-1em fw-400">Lawyers</li>
                     </ul>
                 </div>
                 <div class="my-4 mx-3">
                     <ul class="list-unstyled">
                         <li class="fs-2em fw-600">DIFM Group</li>
-                        <li class="fs-1em fw-400"><a href="https://difm.llc/" class="text-decoration-none textcolor">Difm.llc</a></li>
-                        <li class="fs-1em fw-400"><a href="https://www.worldmodelhunt.com/" class="text-decoration-none textcolor">Worldmodelhunt.com</a></li>
-                        <li class="fs-1em fw-400"><a href="https://bragsocial.com/" class="text-decoration-none textcolor">BragSocial.com</a></li>
+                        <li class="fs-1em fw-400"><a href="https://difm.llc/"
+                                class="text-decoration-none textcolor">Difm.llc</a></li>
+                        <li class="fs-1em fw-400"><a href="https://www.worldmodelhunt.com/"
+                                class="text-decoration-none textcolor">Worldmodelhunt.com</a></li>
+                        <li class="fs-1em fw-400"><a href="https://bragsocial.com/"
+                                class="text-decoration-none textcolor">BragSocial.com</a></li>
                     </ul>
                 </div>
-    
+
             </div>
 
             <div class="my-4 mx-3 px-4">
                 <div class="input-group">
-                    <input type="email" class="form-control Subscribe-Border rounded-500"
-                        placeholder="Enter Your Email" aria-label="Recipient's username"
-                        aria-describedby="basic-addon2">
-                    <span
+                    <input type="email" class="form-control Subscribe-Border rounded-500" placeholder="Enter Your Email"
+                        aria-label="Recipient's username" aria-describedby="basic-addon2" id="Subscribe_input">
+                    <button
                         class="input-group-text bg-color-lightblue text-color-white Subscribe-Border z-index-5 margin-over-footer fw-600 Subscribe-Left-Round px-lg-1"
-                        id="">Subscribe</span>
+                        value="Subscribe" onclick="Subscribed(value)">Subscribe</button>
                 </div>
+                <p class="d-none text-success ms-3 mt-3" id="Subscribe"></p>
+
             </div>
         </div>
     </div>
-
+    <!-- Subscribe Buton and Login js  -->
+    <script src="js/Login.js"></script>
     <!-- bootstrap JS-script  -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

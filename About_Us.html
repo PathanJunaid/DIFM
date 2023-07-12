@@ -29,24 +29,24 @@
             <div class="position-absolute top-50 start-50 translate-middle z-index-10 container">
                 <div class="w-100 mx-auto" onclick="Login_Page_onclick(event)">
                     <div class="d-flex justify-content-between">
-                            <button class="fs-24px px-3 py-3 fw-500 border border-0 bg-color-blue text-color-white" onclick=""
-                                id="">Log in</button>
+                            <div class="fs-24px px-3 py-3 fw-500 border border-0 bg-color-blue text-color-white" onclick=""
+                                id="">Log in</div>
                         <div class="d-flex bg-color-login px-3" onclick="login_hide()">
                             <button class="fs-4 border-0">✖️</button>
                         </div>
                     </div>
-                    <form action="" class="w-100 mx-auto py-5 px-5 bg-color-darkwhite">
-                        <div class="row justify-content-between">
+                    <form method="" action="" onsubmit="login_hide()" class="w-100 mx-auto py-5 px-5 bg-color-darkwhite" id="login-form">
+                        <div class="row justify-content-between" >
                             <div class="col-12 col-lg-5">
                                 <label for="" class="form-label  text-black fs-5 fw-400">Email</label>
-                                <input type="email" placeholder="enter your email" class="form-control py-3">
+                                <input type="email" placeholder="enter your email" class="form-control py-3" required>
                             </div>
                             <div class="col-12 col-lg-5">
                                 <label for="" class="form-label  text-black fs-5 fw-400">Password</label>
-                                <input type="password" placeholder="enter your password" class="form-control py-3">
+                                <input type="password" placeholder="enter your password" class="form-control py-3" required>
                             </div>
                         </div>
-                            <button class="my-5 bg-color-blue border border-0 rounded-500 px-4 py-2 fs-5 text-color-white w-100 text-center">Login</button>
+                            <button class="my-5 bg-color-blue border border-0 rounded-500 px-4 py-2 fs-5 text-color-white w-100 text-center" form="login-form" onclick="">Login</button>
                     </form>
                 </div>
             </div>
@@ -437,12 +437,12 @@
                     <div class="input-group">
                         <input type="email" class="form-control Subscribe-Border rounded-500"
                             placeholder="Enter Your Email" aria-label="Recipient's username"
-                            aria-describedby="basic-addon2">
+                            aria-describedby="basic-addon2" id="Subscribe_input">
                         <button
                             class="input-group-text bg-color-lightblue text-color-white Subscribe-Border z-index-5 margin-over-footer fw-600 Subscribe-Left-Round px-lg-1"
                              value="Subscribe" onclick="Subscribed(value)">Subscribe</button>
                             </div>
-                            <p class="d-none text-success ms-3 mt-3" id="Subscribe">Subscribed</p>
+                            <p class="d-none text-success ms-3 mt-3" id="Subscribe"></p>
                     
                 </div>
             </div>
