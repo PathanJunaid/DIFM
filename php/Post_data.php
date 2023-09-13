@@ -21,5 +21,5 @@ if (!$conn) {
 $query = $conn->query("INSERT INTO lawyer_discription (User_Name, Availablity, Date, Expertise_In)
 VALUES ('$User', '$Avail','$date', '$Expert')");
 $conn->close();
-header("Location: http://localhost/Lawyer/Dashboard.php");
+header("Location: http://localhost/DIFM.github.io/Dashboard.php");
 ?>

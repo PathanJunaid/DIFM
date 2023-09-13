@@ -12,7 +12,7 @@ if(isset($_POST['submit'])){
     $sql = "UPDATE lawyer_discription SET User_Name='$User' , Availablity='$Avail1' , Expertise_In='$Expert1' WHERE Customer_ID = $id";
     $conn->query($sql);
     $conn->close();
-    header("Location: http://localhost/Lawyer/Dashboard.php");
+    header("Location: http://localhost/DIFM.github.io/Dashboard.php");
 }
 else{
     echo "not set";
